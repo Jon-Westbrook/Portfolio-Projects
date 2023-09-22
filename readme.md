@@ -2,8 +2,7 @@
 
 ... via **Firebase Web Hosting**. 
 
-[Project 1](https://www.ibm.com/services/resources/business/supply-chain.html)
-<a href="http://example.com/" target="_blank">Hello, world!</a>
+[Project 1](https://www.ibm.com/services/resources/business/supply-chain.html){:target="_blank"}
 An animated website exploring strategy, integrations and sustainability for streamlining modern supply chain challenges. Utilizing the carbon design system, it features **GSAP**, **Lottie** and **Aftereffects** animations, along with **HTML/CSS/Javascript/jQuery**. 
 
 [Project 2](https://jonwest-cc080.web.app/icsc/?p=templates-T01-Home)                                                     
