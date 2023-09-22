@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <meta name="format-detection" content="telephone=no">
+
+
+  <link rel="stylesheet" href="../../assets/css/style.css?1695350198885" />
+  <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1695350198885" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="../../assets/css/jquery-ui.theme.min.css">
+
+  <link rel="stylesheet" media="print" href="../../assets/css/print.css">
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+  <!-- never cache patterns -->
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1695350198885" media="all">
+  <link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1695350198885" media="all" />
+
+  <!-- End Pattern Lab -->
+
+  <!-- Font Inclusion -->
+  <!-- <script type="text/javascript" src="//fast.fonts.net/jsapi/b9d7a925-1632-4db0-a4a5-01f99e38c7fc.js"></script> -->
+
+</head>
+
+<body class="">
+
+  <div class="row wysiwyg-text-wrapper">
+    <div class="col-md-8 offset-md-2">
+
+      <h2>This is a heading (h2)</h2>
+      <h3>This is a sub-heading (h3)</h3>
+      <h4>This is also a sub-heading (h4)</h4>
+      <h5>This is a dark intro paragraph (h5)</h5>
+      <h6>This is a light intro paragraph (h6)</h6>
+
+      <p>This is a paragraph (p). Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+
+      <p>This is a paragraph with <strong>strong text</strong> and <em>emphasized
+          text</em> and <a href="#">link text</a> inside it.</p>
+
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.</li>
+        <li> Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur.</li>
+      </ul>
+
+      <ol>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.</li>
+        <li> Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur.</li>
+      </ol>
+
+
+      <p>This button has the right color text:</p>
+
+      <p>
+        <a class="btn btn-primary" href="#">Button Link Here</a>
+      </p>
+
+      <table border="1" cellpadding="1" cellspacing="1">
+        <tbody>
+          <tr>
+            <th>30 days or more before appointment</th>
+            <td>No fee, unlimited changes</td>
+          </tr>
+          <tr>
+            <th>5-29 days before appointment</th>
+            <td>$50 per change (payable to Prometric)</td>
+          </tr>
+          <tr>
+            <th>Less than 5 days before appointment</th>
+            <td>Changes cannot be processed</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+    {
+      "cssEnabled": false,
+      "patternLineageExists": false,
+      "patternLineages": [],
+      "lineage": [],
+      "patternLineageRExists": true,
+      "patternLineagesR": [{
+        "lineagePattern": "modules-M54-WYSIWYG-Text",
+        "lineagePath": "../../patterns/02-modules-M54-WYSIWYG-Text/02-modules-M54-WYSIWYG-Text.rendered.html"
+      }],
+      "lineageR": [{
+        "lineagePattern": "modules-M54-WYSIWYG-Text",
+        "lineagePath": "../../patterns/02-modules-M54-WYSIWYG-Text/02-modules-M54-WYSIWYG-Text.rendered.html"
+      }],
+      "patternLineageEExists": true,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternType": "components"
+      },
+      "patternExtension": "mustache",
+      "patternName": "C66 WYSIWYG Text",
+      "patternPartial": "components-C66-WYSIWYG-Text",
+      "patternState": "",
+      "patternEngineName": "mustache",
+      "extraOutput": {}
+    }
+  </script>
+
+  <script>
+    /*!
+     * scriptLoader - v0.1
+     *
+     * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+     * Licensed under the MIT license
+     *
+     */
+
+    var scriptLoader = {
+
+      run: function(js, cb, target) {
+        var s = document.getElementById(target + '-' + cb);
+        for (var i = 0; i < js.length; i++) {
+          var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+          var c = document.createElement('script');
+          c.src = '../../' + src + '?' + cb;
+          if (typeof js[i] != 'string') {
+            if (js[i].dep !== undefined) {
+              c.onload = function(dep, cb, target) {
+                return function() {
+                  scriptLoader.run(dep, cb, target);
+                }
+              }(js[i].dep, cb, target);
+            }
+          }
+          s.parentNode.insertBefore(c, s);
+        }
+      }
+
+    }
+  </script>
+
+  <script id="pl-js-polyfill-insert-1695350198885">
+    (function() {
+      if (self != top) {
+        var cb = '1695350198885';
+        var js = [];
+        if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+          js.push('styleguide/bower_components/classList.min.js');
+        }
+        scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+      }
+    })();
+  </script>
+
+  <script id="pl-js-insert-1695350198885">
+    (function() {
+      if (self != top) {
+        var cb = '1695350198885';
+        var js = [{
+          'src': 'styleguide/bower_components/jwerty.min.js',
+          'dep': ['styleguide/js/patternlab-pattern.min.js']
+        }];
+        scriptLoader.run(js, cb, 'pl-js-insert');
+      }
+    })();
+  </script>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="../../assets/js/bootstrap.min.js"></script>
+
+  <!-- Some Patternlab Stuff, I figure -->
+  <script type="text/javascript" src="../../assets/js/overlay.js"></script>
+  <!-- Polyfill IE gray filter -->
+  <script type="text/javascript" src="../../assets/js/jquery.gray.min.js"></script>
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../../assets/js/custom.js"></script>
+
+</body>
+
+</html>

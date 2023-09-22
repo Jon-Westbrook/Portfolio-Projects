@@ -1,0 +1,1236 @@
+<!-- Modals -->
+
+<div class="modal fade modal-full" id="customerCreateInvoice" tabindex="-1" role="dialog" aria-labelledby="Create New Invoice"
+  aria-hidden="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <!-- Mini-Header -->
+      <div class="container-fluid mini-header heading-row bg-primary-2">
+        <div class="container">
+          <div class="row h-100 py-5">
+            <div class="col-lg-11 col-xl-9 mx-auto heading-col d-flex flex-column flex-md-row align-items-center px-0">
+              <h1 class="primary-3">Create New Invoice</h1>
+              <div class="ml-auto nav nav-pills" role="tablist">
+                <button type="button" class="ml-4 btn btn-secondary btn-dark cancel" data-dismiss="modal" href=""
+                  role="" aria-controls=""
+                  aria-selected="">Cancel</button>
+                <button type="button" class="ml-4 btn btn-secondary btn-dark invoice-save-draft" data-dismiss="" href=""
+                  role="" aria-controls=""
+                  aria-selected="">Save Draft</button>
+                <button type="button" class="ml-4 btn btn-secondary btn-dark pills-edit-tab" data-dismiss="" href="#pills-edit"
+                  role="tab" aria-controls="pills-edit"
+                  aria-selected="true">Edit</button>
+                <button type="button" class="ml-4 btn btn-dark pills-preview-tab" data-dismiss="" href="#pills-preview"
+                  role="tab" aria-controls="pills-preview"
+                  aria-selected="false">Preview</button>
+                <button type="button" class="ml-4 btn btn-dark invoice-send" data-dismiss="modal" href=""
+                  role="" aria-controls=""
+                  aria-selected="">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-header py-0 px-md-0">
+        <!-- Mobile Header -->
+        <div class="container h-100 d-md-none pl-0">
+          <div class="row h-100">
+            <div class="col-12 px-0 d-flex align-items-center">
+              <h1 class="primary-3 display4">Create New Invoice</h1>
+              <div class="ellipse-button">
+                <div>
+                  <a href="javascript:void(0);"
+                    class="mobile-ellipse-trigger display2 primary-3 d-flex align-items-center" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"><span class="d-inline-block caret ml-2">&nbsp;</span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <a href="" class="dropdown-item" data-dismiss="modal"
+                      aria-label="cancel">Cancel</a>
+                    <a href="" class="dropdown-item" data-dismiss=""
+                      aria-label="Save Draft">Save Draft</a>
+                    <a href="" class="dropdown-item pills-edit-tab" data-dismiss=""
+                      aria-label="Edit ">Edit</a>
+                    <a href="" class="dropdown-item pills-preview-tab" data-dismiss=""
+                      aria-label="Preview ">Preview</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Header image fade with object-fit -->
+        <img class="d-none d-md-block header-img h-100 w-100" src="../../images/modal-header.svg" />
+        <!-- Desktop Header -->
+        <div class="container d-none d-md-block h-100 heading-row">
+          <div class="row h-100">
+            <div class="col-lg-11 col-xl-9 mx-auto heading-col d-flex flex-column flex-md-row align-items-center px-0">
+              <h1 class="primary-3 invoice-page-heading">Create New Invoice</h1>
+              <div class="ml-auto nav nav-pills" role="tablist">
+                <button type="button" class="ml-4 btn btn-secondary btn-dark cancel" data-dismiss="modal" href=""
+                  role="" aria-controls=""
+                  aria-selected="">Cancel</button>
+                <button type="button" class="ml-4 btn btn-secondary btn-dark invoice-save-draft" data-dismiss="" href=""
+                  role="" aria-controls=""
+                  aria-selected="">Save Draft</button>
+                <button type="button" class="ml-4 btn btn-secondary btn-dark pills-edit-tab" data-dismiss="" href="#pills-edit"
+                  role="tab" aria-controls="pills-edit"
+                  aria-selected="true">Edit</button>
+                <button type="button" class="ml-4 btn btn-dark pills-preview-tab" data-dismiss="" href="#pills-preview"
+                  role="tab" aria-controls="pills-preview"
+                  aria-selected="false">Preview</button>
+                <button type="button" class="ml-4 btn btn-dark invoice-send" data-dismiss="modal" href=""
+                  role="" aria-controls=""
+                  aria-selected="">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body pt-0 px-0 h-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-11 col-xl-9 mx-auto pb-8 mainBox">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-edit" role="tab-panel"
+                  aria-labelledby="pills-edit-tab">
+                  <form class="w-100 needs-validation" novalidate>
+
+                    <div class="row py-6 py-md-8">
+  <div class="col-md-4 offset-md-1 pb-4">
+    <h2 class="secondary-6">Customer Information</h2>
+  </div>
+  <div class="col-md-5">
+    <div class="form-row">
+      <div class="form-group col-md-12 mb-3">
+        <label for="validationCustom01" class="primary-2">Name</label>
+        <input type="text" class="form-control" id="validationCustom01" aria-describedby="validationCustom01"
+          placeholder="Search customers or input new cardholder" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-9 mb-3">
+        <label for="validationCustom02" class="primary-2">Company</label>
+        <input type="text" class="form-control" id="validationCustom02" aria-describedby="validationCustom02" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="form-group col-md-12 mb-3">
+        <label for="InputEmail1" class="primary-2">Email</label>
+        <input type="email" class="form-control w-100" id="InputEmail1" aria-describedby="InputEmail1">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="form-group col-md-6 mb-3">
+        <label for="InputPhone1" class="primary-2">Phone number</label>
+        <input type="tel" class="form-control w-100" id="InputPhone1" aria-describedby="InputPhone1">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="form-group col-md-12 mb-3">
+        <label for="Additional1" class="primary-2">Additional Recipients</label>
+        <input type="text" class="form-control w-100" id="Additional1" aria-describedby="Additional1">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <p class="small mt-1" for="customCheck1">Use commas to separate multiple email addresses.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- I Rule -->
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div class="w-100 rule">&nbsp;</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+                    <div class="row py-6 py-md-8">
+  <div class="col-md-4 offset-md-1 pb-4">
+    <h2 class="secondary-6">Invoice Details</h2>
+  </div>
+  <div class="col-md-6 col-lg-5">
+    <div class="form-row px-0">
+      <div class="form-group col-md-8 mb-3">
+        <label for="validationCustom02" class="primary-2">Invoice Title</label>
+        <input type="text" class="form-control" id="validationCustom02" aria-describedby="validationCustom02" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-row px-0">
+      <div class="form-group col-md-6 mb-3">
+        <label for="validationCustom02" class="primary-2">Invoice ID</label>
+        <input type="text" class="form-control" id="validationCustom02" aria-describedby="validationCustom02" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-5 mb-3">
+        <label for="validationCustom05" class="primary-2">Frequency</label>
+        <select id="inputState" class="custom-select">
+          <option selected>Select...</option>
+          <option>Weekly</option>
+          <option>Semi-monthly</option>
+          <option>Monthly</option>
+          <option>Annually</option>
+        </select>
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+      <div class="form-group col-md-7 mb-3">
+        <label for="example-date-input" class="primary-2">Due</label>
+        <div class="input-group">
+          <input class="form-control custom-date date" type="text" name="date" value="Mar 28, 2019">
+          <div class="invalid-feedback">
+            Please select a valid date.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label class="primary-2" for="comment">Message</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- I Rule -->
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div class="w-100 rule">&nbsp;</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+                    <div class="row pt-6 pt-md-8">
+  <div class="col-md-10 offset-md-1 pb-4">
+    <h2 class="secondary-6 mb-6 mb-md-8">Line Items</h2>
+
+    <table id="invoice-edit-table" class="mb-0 display nowrap">
+      <thead class="bg-secondary-1 primary-3 label uppercase">
+        <tr>
+          <th><span class="pl-3">Seq.</span></th>
+          <th><span class="pl-1">Item Name</span></th>
+          <th><span class="pl-3">Quantity</span></th>
+          <th><span class="pl-3">Price</span></th>
+          <th><span class="pl-3">Total</span></th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+    </table>
+    <a href="#" class="small bold d-inline-block mt-3 add-additional"><span class="add-additional-icon"></span> Add
+      additional line</a>
+  </div>
+</div>
+
+<div class="row pb-6">
+  <div class="col-md-6 offset-md-1 pb-4">
+    &nbsp;
+  </div>
+  <div class="col-md-4">
+    <div class="row mx-0 px-0">
+      <div class="w-100 rule thin-gray">&nbsp;</div>
+      <div class="col-4 col-md-5 d-flex align-items-center">
+        <p class="label my-3">Discount</p>
+      </div>
+      <div class="col-6 d-flex align-items-center">
+        <p class="gray my-3">XX%</p>
+      </div>
+      <div class="w-100 rule thin-gray">&nbsp;</div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-4 col-md-5 d-flex align-items-center">
+        <p class="label my-3">Subtotal</p>
+      </div>
+      <div class="col-6 d-flex align-items-center">
+        <p class="gray my-3">$00.00</p>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-4 col-md-5 d-flex align-items-center">
+        <p class="label my-3">Tax</p>
+      </div>
+      <div class="col-6 d-flex align-items-center">
+        <p class="gray my-3">$00.00</p>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-4 col-md-5 d-flex align-items-center">
+        <p class="label my-3">Total</p>
+      </div>
+      <div class="col-6 d-flex align-items-center">
+        <p class="gray my-3">$00.00</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- I Rule -->
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div class="w-100 rule">&nbsp;</div>
+  </div>
+</div>
+
+
+
+                  </form>
+                </div>
+                <div class="tab-pane fade " id="pills-preview" role="tab-panel"
+                  aria-labelledby="pills-preview-tab">
+                  <form class="w-100 needs-validation" novalidate>
+
+
+
+
+                    <div class="row pt-6 pt-md-8 d-flex align-items-start">
+  <div class="col-md-3 offset-md-1 pb-4 pl-md-0">
+    <img src="../../images/invoice-logo.png" alt="Customer Logo" class="preview-logo">
+  </div>
+  <div class="col-md-7 pb-4">
+    <div class="invoice-heading w-100 text-md-right pt-3 py-md-0">
+      <h1 class="secondary-6">{ Invoice Title }</h1>
+    </div>
+    <div class="d-flex flex-column flex-md-row mt-5">
+      <div class="flex-fill text-md-right">
+        <p class="label mb-0 gray">Invoice #</p>
+        <p>1875</p>
+      </div>
+      <div class="flex-fill text-md-right">
+        <p class="label mb-0 gray">Invoice Date</p>
+        <p>Dec 20, 2018</p>
+      </div>
+      <div class="flex-fill text-md-right">
+        <p class="label mb-0 gray">Invoice Due Date</p>
+        <p class="mb-0">Jan 20, 2019</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row pt-md-8 d-flex align-items-start">
+  <div class="col-md-3 offset-md-1 pb-4 pl-md-0">
+    <p class="mb-0">Dwight Schrute</p>
+    <p class="mb-0">dschrute@dundermifflin.com</p>
+    <p class="mb-0">(123) 123-1234</p>
+  </div>
+  <div class="col-md-4 offset-md-3 pb-4 mt-3 mt-md-0">
+    <div class="bg-gray-light text-right p-3 left-border">
+      <label class="mb-0 ml-5 ml-md-7 primary-2">Amount Due</label>
+      <p class="display2 mb-0 light">$2,049.79</p>
+    </div>
+  </div>
+</div>
+
+<div class="row pt-5">
+  <div class="col-md-10 offset-md-1 pb-5 pl-md-0">
+    <div class="w-100 rule thin-gray">&nbsp;</div>
+  </div>
+</div>
+
+<div class="row pt-3">
+  <div class="col-md-3 offset-md-1 pb-4 pl-md-0">
+    <p class="label primary-2 mb-1">Bill To</p>
+    <p class="mb-0">Leslie Knope</p>
+    <p class="mb-0">lknope@indianaparkrec.com</p>
+  </div>
+</div>
+
+<div class="row pt-3">
+  <div class="col-md-10 offset-md-1 pb-4 pl-md-0">
+    <table id="invoice-preview-table" class="mb-0 display nowrap">
+      <thead class="bg-secondary-1 primary-3 label uppercase">
+        <tr>
+          <th>Item Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="py-2 pr-1">Lorem ipsum lorem ipsum</td>
+          <td class="py-2 pr-1">10</td>
+          <td class="py-2 pr-1">$999.99</td>
+          <td class="py-2 pr-1">$999.99</td>
+        </tr>
+        <tr>
+          <td class="py-2 pr-1">Lorem ipsum lorem ipsum</td>
+          <td class="py-2 pr-1">10</td>
+          <td class="py-2 pr-1">$999.99</td>
+          <td class="py-2 pr-1">$999.99</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row pb-6">
+  <div class="col-md-6 offset-md-1">
+    &nbsp;
+  </div>
+  <div class="col-md-4">
+    <div class="row mx-0 px-0">
+      <div class="w-100 rule thin-gray">&nbsp;</div>
+      <div class="col-5 d-flex align-items-center">
+        <p class="label my-3">Discount</p>
+      </div>
+      <div class="col-5 d-flex align-items-center justify-content-end">
+        <p class="my-3">XX%</p>
+      </div>
+      <div class="w-100 rule thin-gray">&nbsp;</div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-5 d-flex align-items-center">
+        <p class="label my-3">Subtotal</p>
+      </div>
+      <div class="col-5 d-flex align-items-center justify-content-end">
+        <p class="my-3">$1999.98</p>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-5 d-flex align-items-center">
+        <p class="label my-3">Taxable Subtotal</p>
+      </div>
+      <div class="col-5 d-flex align-items-center justify-content-end">
+        <p class="my-3">$1999.98</p>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-5 d-flex align-items-center">
+        <p class="label my-3">Tax</p>
+      </div>
+      <div class="col-5 d-flex align-items-center justify-content-end">
+        <p class="my-3">$49.75</p>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-5 d-flex align-items-center">
+        <p class="label my-3">Total</p>
+      </div>
+      <div class="col-5 d-flex align-items-center justify-content-end">
+        <p class="my-3 bold">$2049.45</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- I Rule -->
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div class="w-100 rule thin-gray">&nbsp;</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <p class="label mt-6 mb-1">A note to our customers</p>
+    <p class="small mb-0 gray-medium">• To cover the cost of credit card acceptance, we pass on a 3.5% credit card fee.
+    </p>
+    <p class="small mb-0 gray-medium">• This fee is not more than the cost of accepting these cards. There is no fee for
+      debit cards.</p>
+  </div>
+</div>
+
+<!-- I Rule -->
+<div class="row pt-6">
+  <div class="col-md-10 offset-md-1">
+    <div class="w-100 rule">&nbsp;</div>
+  </div>
+</div>
+
+
+                  </form>
+                </div>
+                <div class="row mt-8">
+                  <div class="col-md-10 offset-md-1 d-flex">
+                    <div class="ml-md-auto nav nav-pills btns-bottom d-flex flex-column-reverse d-sm-block"
+                      role="tablist">
+                      <button type="button" class="mt-3 ml-0 mr-3 mr-md-0 ml-md-3 btn btn-secondary cancel"
+                        data-dismiss="modal" href="" role=""
+                        aria-controls="" aria-selected="">Cancel</button>
+                      <button type="button" class="mt-3 ml-0 mr-3 mr-md-0 ml-md-3 btn btn-secondary invoice-save-draft"
+                        data-dismiss="" href="" role=""
+                        aria-controls="" aria-selected="">Save Draft</button>
+                      <button type="button" class="mt-3 ml-0 mr-3 mr-md-0 ml-md-3 btn btn-secondary pills-edit-tab"
+                        data-dismiss="" href="#pills-edit" role="tab"
+                        aria-controls="pills-edit" aria-selected="true">Edit</button>
+                      <button type="button" class="mt-3 ml-0 mr-3 mr-md-0 ml-md-3 btn pills-preview-tab"
+                        data-dismiss="" href="#pills-preview" role="tab"
+                        aria-controls="pills-preview" aria-selected="false">Preview</button>
+                      <button type="button" class="mt-3 ml-0 mr-3 mr-md-0 ml-md-3 btn invoice-send"
+                        data-dismiss="modal" href="" role=""
+                        aria-controls="" aria-selected="">Send</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade modal-full" id="newSale" tabindex="-1" role="dialog" aria-labelledby="Run New Sale"
+  aria-hidden="false">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <!-- Mini-Header -->
+      <div class="container-fluid mini-header heading-row bg-primary-2">
+        <div class="container">
+          <div class="row h-100 py-5">
+            <div class="col-lg-11 col-xl-9 mx-auto heading-col d-flex flex-column flex-md-row align-items-center px-0">
+              <h1 class="primary-3">Run New Sale</h1>
+              <div class="ml-auto">
+                <button type="button" form="" class="ml-4 btn btn-secondary btn-dark cancel" data-dismiss="modal"
+                  aria-label="cancel" >Cancel</button>
+                <button type="submit" form="newSaleForm" class="ml-4 btn charge" data-dismiss=""
+                  aria-label="charge" disabled>Charge</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-header py-0 px-md-0">
+        <!-- Mobile Header -->
+        <div class="container h-100 d-md-none pl-0">
+          <div class="row h-100">
+            <div class="col-12 px-0 d-flex align-items-center">
+              <h1 class="primary-3 display4">Run New Sale</h1>
+              <div class="ellipse-button">
+                <div>
+                  <a href="javascript:void(0);"
+                    class="mobile-ellipse-trigger display2 primary-3 d-flex align-items-center" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"><span class="d-inline-block caret ml-2">&nbsp;</span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <a href="" class="dropdown-item" data-dismiss="modal"
+                      aria-label="cancel">Cancel</a>
+                    <a href="" class="dropdown-item" data-dismiss=""
+                      aria-label="Charge">Charge</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image fades with object-fit -->
+        <img class="d-none d-md-block header-img h-100 w-100" src="../../images/modal-header.svg" />
+        <!-- <img class="d-none bottom" src="../../images/modal-header-plain.svg" /> -->
+
+
+
+        <!-- Desktop Header -->
+        <div class="container d-none d-md-block h-100 heading-row">
+          <div class="row h-100">
+            <div class="col-lg-11 col-xl-9 mx-auto heading-col d-flex flex-column flex-md-row align-items-center px-0">
+              <h1 class="primary-3">Run New Sale</h1>
+              <div class="ml-auto">
+                <button type="button" form="" class="ml-4 btn btn-secondary btn-dark cancel" data-dismiss="modal"
+                  aria-label="cancel" >Cancel</button>
+                <button type="submit" form="newSaleForm" class="ml-4 btn charge" data-dismiss=""
+                  aria-label="charge" disabled>Charge</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-body pt-0 px-0 h-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-11 col-xl-9 mx-auto mainBox pb-8">
+              <form id="newSaleForm" class="w-100 needs-validation" novalidate>
+                <div class="row pt-6 pb-8 py-md-8">
+                  <div class="col-md-4 offset-md-1 pb-4">
+                    <h2 class="secondary-6">Transaction</h2>
+                    <div class="customer-note mt-5 mb-4">
+                      <img src="..&#x2F;..&#x2F;images&#x2F;icons&#x2F;note.svg" alt="Dollar Sign Icon" class="d-inline-block">
+                      <p class="label bold d-inline-block tertiary-2">Customer Note</p>
+                      <ul class="sale-tip-list small light">
+                        <li>To cover the cost of credit card acceptance, we pass on a 3.5% credit card fee.</li>
+                        <li>This fee is not more than the cost of accepting these cards. There is no fee from debit cards.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-row">
+  <div class="form-group col-md-6">
+    <label for="amountOwed" class="primary-2">Amount Owed</label>
+    <div class="dollar-wrapper">
+      <input type="text" class="form-control " id="amountOwed" value="" required>
+    </div>
+    <div class="invalid-feedback">
+      Please provide a valid amount.
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-9">
+    <div class="row mx-0 px-0">
+      <div class="col-md-7 d-flex align-items-center pl-0">
+        <p class="label mt-3 mb-0 mb-md-3">Subtotal</p>
+      </div>
+      <div class="col-md-3 d-flex align-items-center justify-content-start justify-content-md-end px-0">
+        <span class="my-3 gray subTotal ">&ndash;</span>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-md-7 d-flex align-items-center pl-0">
+        <p class="label mt-3 mb-0 mb-md-6">Credit Card Fee (3.5%)</p>
+      </div>
+      <div class="col-md-3 d-flex align-items-center justify-content-start justify-content-md-end px-0 mb-3 mb-md-0">
+        <span class="my-3 gray taxRate ">&ndash;</span>
+      </div>
+    </div>
+    <div class="row mx-0">
+      <div class="col-md-10 px-0">
+        <div class="rule thin-gray">&nbsp;</div>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-md-7 d-flex align-items-center pl-0">
+        <p class="label mt-3 mb-0">Total Amount</p>
+      </div>
+      <div class="col-md-3 d-flex align-items-center justify-content-start justify-content-md-end px-0">
+        <span class="mt-3 mb-0 total ">&ndash;</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+                  </div>
+                </div>
+                <!-- I Rule -->
+                <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                    <div class="w-100 rule">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="row pt-6 pb-8 py-md-8">
+                  <div class="col-md-4 offset-md-1 pb-4">
+                    <h2 class="secondary-6">Payment</h2>
+                  </div>
+                  <div class="col-md-6">
+
+                    <div class="form-row">
+  <div class="form-group col-md-10">
+    <label for="cardName01" class="primary-2">Name on Card</label>
+    <input type="text" class="form-control d-inline-block" id="cardName01" required>
+    <div class="invalid-feedback">
+      Yep, you need the name.
+    </div>
+  </div>
+  <div class="form-group col-md-7 col-lg-8 col-xl-7">
+    <label for="cardNo01" class="primary-2">Card Number</label>
+    <input type="text" class="form-control d-inline-block creditCard" id="cardNo01" required>
+    <div class="invalid-feedback">
+      Math is not your strong-suit, is it?
+    </div>
+  </div>
+  <div class="form-group col-md-5 col-lg-4 col-xl-5">
+    <img class="d-inline-block card-images" src="..&#x2F;..&#x2F;images&#x2F;cards&#x2F;card-icons@2x.png" alt="Credit Card Images">
+  </div>
+  <div class="form-group col-md-4 mb-md-2 pr-4 align-self-end">
+    <label for="expDate01" class="primary-2">Exp. Date</label>
+    <input type="text" class="form-control exp-date" id="expDate01" required>
+    <div class="invalid-feedback">
+      Far, far away...
+    </div>
+  </div>
+  <div class="form-group col-md-4 mb-md-2 align-self-end">
+    <label for="secCode01" class="primary-2">CVV</label>
+    <input type="text" class="form-control w-100 col-md-8" id="secCode01" required>
+    <div class="invalid-feedback">
+      3 magical #'s
+    </div>
+  </div>
+</div>
+
+
+                  </div>
+                </div>
+                <!-- I Rule -->
+                <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                    <div class="w-100 rule">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="row pt-6 pb-8 py-md-8">
+                  <div class="col-md-4 offset-md-1 pb-4">
+                    <h2 class="secondary-6">Billing</h2>
+                  </div>
+                  <div class="col-md-6">
+
+
+                    <div class="form-row">
+  <div class="form-group col-md-12">
+    <label for="bill01" class="primary-2">Billing Address</label>
+    <input type="text" class="form-control d-inline-block" id="bill01" required>
+    <div class="invalid-feedback">
+      What's yer address?
+    </div>
+  </div>
+  <div class="form-group col-md-8 col-lg-7">
+    <label for="city01" class="primary-2">City</label>
+    <input type="text" class="form-control" id="city01" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+  <div class="form-group col-md-4 col-lg-2">
+    <label for="stateSelect01" class="primary-2">State</label>
+    <select id="stateSelect01" class="custom-select" required>
+      <option selected></option>
+      <option value="AL">AL</option>
+      <option value="AK">AK</option>
+      <option value="AR">AR</option>
+      <option value="AZ">AZ</option>
+      <option value="CA">CA</option>
+      <option value="CO">CO</option>
+      <option value="CT">CT</option>
+      <option value="DC">DC</option>
+      <option value="DE">DE</option>
+      <option value="FL">FL</option>
+      <option value="GA">GA</option>
+      <option value="HI">HI</option>
+      <option value="IA">IA</option>
+      <option value="ID">ID</option>
+      <option value="IL">IL</option>
+      <option value="IN">IN</option>
+      <option value="KS">KS</option>
+      <option value="KY">KY</option>
+      <option value="LA">LA</option>
+      <option value="MA">MA</option>
+      <option value="MD">MD</option>
+      <option value="ME">ME</option>
+      <option value="MI">MI</option>
+      <option value="MN">MN</option>
+      <option value="MO">MO</option>
+      <option value="MS">MS</option>
+      <option value="MT">MT</option>
+      <option value="NC">NC</option>
+      <option value="NE">NE</option>
+      <option value="NH">NH</option>
+      <option value="NJ">NJ</option>
+      <option value="NM">NM</option>
+      <option value="NV">NV</option>
+      <option value="NY">NY</option>
+      <option value="ND">ND</option>
+      <option value="OH">OH</option>
+      <option value="OK">OK</option>
+      <option value="OR">OR</option>
+      <option value="PA">PA</option>
+      <option value="RI">RI</option>
+      <option value="SC">SC</option>
+      <option value="SD">SD</option>
+      <option value="TN">TN</option>
+      <option value="TX">TX</option>
+      <option value="UT">UT</option>
+      <option value="VT">VT</option>
+      <option value="VA">VA</option>
+      <option value="WA">WA</option>
+      <option value="WI">WI</option>
+      <option value="WV">WV</option>
+      <option value="WY">WY</option>
+    </select>
+    <div class="invalid-feedback">
+
+    </div>
+  </div>
+  <div class="form-group col-md-5 col-lg-3">
+    <label for="zip01" class="primary-2">Zipcode</label>
+    <input type="text" class="form-control" id="zip01" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+  <div class="w-100"></div>
+  <div class="form-group col-md-7 align-self-end">
+    <label for="email01" class="primary-2">Email</label>
+    <input type="email" class="form-control" id="email01" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+  <div class="form-group col-md-5 align-self-end">
+    <label for="phone01" class="primary-2 d-flex w-100">Phone<span
+        class="d-inline-block gray-medium small italic ml-auto optional text-capitalize">Optional</span></label>
+    <input type="tel" class="form-control" id="phone01" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+  <div class="w-100"></div>
+  <div class="form-group col-md-12 mt-0 pl-2">
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="customCheck1">
+      <label class="small custom-control-label medium" for="customCheck1">Save to Customer Profile</label>
+    </div>
+    <div class="invalid-feedback">
+      Test message
+    </div>
+  </div>
+  <div class="form-group col-md-12 mt-9">
+    <label class="primary-2 d-flex w-100" for="comment01">Message<span
+        class="d-inline-block gray-medium small italic ml-auto optional text-capitalize">Optional</span></label>
+    <textarea class="form-control" rows="1" id="comment01"></textarea>
+  </div>
+</div>
+
+                  </div>
+                </div>
+                <!-- I Rule -->
+                <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                    <div class="w-100 rule">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="row mt-8">
+                  <div class="col-md-10 offset-md-1 d-sm-flex">
+                    <div class="ml-sm-auto">
+                      <button type="button" class="modal-button-bottom ml-sm-4 btn btn-secondary cancel"
+                        data-dismiss="modal" aria-label="cancel"
+                        >Cancel</button>
+                      <button type="button" class="modal-button-bottom ml-sm-4 btn charge"
+                        data-dismiss="" aria-label="charge"
+                        disabled>Charge</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="wrapper">
+
+  <!-- Sidebar  -->
+<nav id="sidebar">
+
+  <div id="dismiss" class="d-lg-none">
+    <a href="javascript:;" id="closeMenu">
+      <div class="sidebar-close"></div>
+    </a>
+  </div>
+
+  <div class="sidebar-header">
+    <a href="&#x2F;patterns&#x2F;04-Templates-T02-Home&#x2F;04-Templates-T02-Home.rendered.html" class="d-flex ml-5 mt-8">
+      <svg viewBox="0 0 76 48">
+        <path
+          d="M7.1,0.8C3.7,0.8,1,3.5,1,6.9v22.7l0.2,0.2h2l0.2-0.2V6.9c0-2,1.6-3.7,3.7-3.7h62.5c2,0,3.7,1.7,3.7,3.7V41 c0,2-1.6,3.7-3.7,3.7h-8.9l-0.2,0.2v2l0.2,0.2h8.9c3.3,0,6.1-2.7,6.1-6.1V6.9c0-3.4-2.7-6.1-6.1-6.1">
+        </path>
+        <path
+          d="M24,47.1h-2.4l-0.2-0.2l-0.2-0.4H21c0,0-0.9,0.9-2.4,0.9c-2.4,0-3.9-1.3-3.9-3.5c0-3.3,3-3.7,4.7-3.7 c0.9,0,1.5,0.2,1.5,0.2l0.2-0.2v-0.2c0-1.1-0.2-1.3-1.5-1.3c-0.6,0-1.3,0-1.5,0.7L18,39.5h-2.6l-0.2-0.2c0-1.3,1.1-3.3,4.5-3.3 c3.4,0,4.5,1.7,4.5,5v5.9L24,47.1z M21,42.5c0,0-0.4-0.2-1.3-0.2c-1.3,0-1.9,0.4-1.9,1.3c0,0.7,0.4,1.1,1.5,1.1 c1.1,0,1.9-0.7,1.9-1.5v-0.4L21,42.5z">
+        </path>
+        <path
+          d="M11.1,42.5l0.2-0.2h2.6l0.2,0.2c-0.4,3-2.8,4.8-6.2,4.8c-4.7,0-7.3-3.3-7.3-7.8c0-4.6,2.6-7.8,7.3-7.8 c3.4,0,5.8,1.7,6.2,4.6l-0.2,0.2h-2.6l-0.2-0.2c-0.4-1.3-1.5-2-3.2-2c-3,0-4.3,2.2-4.3,5.2c0,3,1.3,5.2,4.3,5.2 C9.6,44.7,10.7,44.1,11.1,42.5">
+        </path>
+        <path
+          d="M32.5,38.9H31c-1.7,0-2.4,0.9-2.4,2.8v5.2l-0.2,0.2h-2.6l-0.2-0.2V36.5l0.2-0.2h2.4l0.2,0.2l0.2,0.7h0.2 c0,0,0.4-0.9,2.4-0.9h1.3l0.2,0.2v2.2L32.5,38.9z">
+        </path>
+        <path
+          d="M37.5,36c1.9,0,2.8,1.1,2.8,1.1h0.2v-5l0.2-0.2h2.6l0.2,0.2v14.8l-0.2,0.2H41l-0.2-0.2l-0.2-0.7h-0.2 c0,0-0.9,1.1-2.8,1.1c-2.6,0-4.7-2.2-4.7-5.6S35,36,37.5,36 M38.2,44.7c1.7,0,2.4-1.3,2.4-3c0-1.7-0.6-3-2.4-3 c-1.7,0-2.4,1.3-2.4,3C35.8,43.4,36.5,44.7,38.2,44.7">
+        </path>
+        <polygon
+          points="57.3,47.1 55.8,47.1 55.4,46.9 51.3,41.5 51.1,41.5 47,46.9 46.6,47.1 45.1,47.1 44.9,46.9 44.9,44.7 49.2,39.3 49.2,39.1 45.1,34.3 45.1,32.1 45.3,31.9 46.8,31.9 47.2,32.1 51.1,36.9 51.3,36.9 55.2,32.1 55.6,31.9 57.1,31.9 57.3,32.1 57.3,34.3 53.3,39.1 53.3,39.3 57.6,44.7 57.6,46.9">
+        </polygon>
+      </svg> </a>
+  </div>
+
+  <!--
+  <ul class="list-unstyled mt-5 ">
+    <li class="profile-link">
+      <a href="#profileSubmenu" data-toggle="collapse" aria-expanded="false" class="ml-4 py-auto primary-3">Joy Johnson</a>
+      <ul class="collapse list-unstyled" id="profileSubmenu">
+          <li class="ml-4 submenu">
+              <a href="#" class="secondary-1">You got me!</a>
+          </li>
+      </ul>
+    </li>
+    <p class="ml-4 primary-3 org">Joy Catering</p>
+  </ul>
+  -->
+
+  <!-- Main Links -->
+  <ul class="list-unstyled mt-8">
+    <li class=" mb-3 main-link d-flex align-items-center" tabindex="0">
+      <a href="&#x2F;patterns&#x2F;04-Templates-T02-Home&#x2F;04-Templates-T02-Home.rendered.html" class="ml-5 primary-3 w-100" tabindex="-1" >
+        <div class="d-inline-block align-middle">
+          <img src="../../images/icons/nav-home-active.svg" alt="Homepage Icon" class="sidebar-icon mr-2 bottom">
+          <img src="../../images/icons/nav-home.svg" alt="Homepage Icon" class="sidebar-icon mr-2 top">
+        </div>
+        <div class="d-inline-block align-middle copy ml-5">
+          Home
+        </div>
+      </a>
+    </li>
+    <li class=" mb-3 main-link d-flex align-items-center" tabindex="0">
+      <a href="javascript:;" class="ml-5 primary-3 w-100" tabindex="-1" data-toggle="modal"
+        data-target="#newSale" data-backdrop="false" >
+        <div class="d-inline-block align-middle">
+          <img src="../../images/icons/nav-virtualterminal-active.svg" alt="Homepage Icon" class="sidebar-icon mr-2 bottom">
+          <img src="../../images/icons/nav-virtualterminal.svg" alt="Homepage Icon" class="sidebar-icon mr-2 top">
+        </div>
+        <div class="d-inline-block align-middle copy ml-5">
+          Virtual Terminal
+        </div>
+      </a>
+    </li>
+    <li class=" mb-3 main-link d-flex align-items-center" tabindex="0">
+      <a href="&#x2F;patterns&#x2F;04-Templates-T03a-Tables-Reporting&#x2F;04-Templates-T03a-Tables-Reporting.rendered.html" class="ml-5 primary-3 w-100" tabindex="-1" >
+        <div class="d-inline-block align-middle">
+          <img src="../../images/icons/nav-reporting-active.svg" alt="Homepage Icon" class="sidebar-icon mr-2 bottom">
+          <img src="../../images/icons/nav-reporting.svg" alt="Homepage Icon" class="sidebar-icon mr-2 top">
+        </div>
+        <div class="d-inline-block align-middle copy ml-5">
+          Reporting
+        </div>
+      </a>
+    </li>
+    <li class=" mb-3 main-link d-flex align-items-center" tabindex="0">
+      <a href="&#x2F;patterns&#x2F;04-Templates-T07-Customer-Profile&#x2F;04-Templates-T07-Customer-Profile.rendered.html" class="ml-5 primary-3 w-100" tabindex="-1" >
+        <div class="d-inline-block align-middle">
+          <img src="../../images/icons/nav-customers-active.svg" alt="Homepage Icon" class="sidebar-icon mr-2 bottom">
+          <img src="../../images/icons/nav-customers.svg" alt="Homepage Icon" class="sidebar-icon mr-2 top">
+        </div>
+        <div class="d-inline-block align-middle copy ml-5">
+          Customers
+        </div>
+      </a>
+    </li>
+    <li class=" mb-3 main-link d-flex align-items-center" tabindex="0">
+      <a href="#" class="ml-5 primary-3 w-100" tabindex="-1" >
+        <div class="d-inline-block align-middle">
+          <img src="../../images/icons/nav-invoices-active.svg" alt="Homepage Icon" class="sidebar-icon mr-2 bottom">
+          <img src="../../images/icons/nav-invoices.svg" alt="Homepage Icon" class="sidebar-icon mr-2 top">
+        </div>
+        <div class="d-inline-block align-middle copy ml-5">
+          Invoices
+        </div>
+      </a>
+    </li>
+    <li class=" mb-3 main-link d-flex align-items-center" tabindex="0">
+      <a href="&#x2F;patterns&#x2F;04-Templates-T08-Article&#x2F;04-Templates-T08-Article.rendered.html" class="ml-5 primary-3 w-100" tabindex="-1" >
+        <div class="d-inline-block align-middle">
+          <img src="../../images/icons/nav-support-active.svg" alt="Homepage Icon" class="sidebar-icon mr-2 bottom">
+          <img src="../../images/icons/nav-support.svg" alt="Homepage Icon" class="sidebar-icon mr-2 top">
+        </div>
+        <div class="d-inline-block align-middle copy ml-5">
+          Support
+        </div>
+      </a>
+    </li>
+    <li class=" mb-3 main-link d-flex align-items-center" tabindex="0">
+      <a href="#" class="ml-5 primary-3 w-100" tabindex="-1" >
+        <div class="d-inline-block align-middle">
+          <img src="../../images/icons/nav-account-active.svg" alt="Homepage Icon" class="sidebar-icon mr-2 bottom">
+          <img src="../../images/icons/nav-account.svg" alt="Homepage Icon" class="sidebar-icon mr-2 top">
+        </div>
+        <div class="d-inline-block align-middle copy ml-5">
+          Account
+        </div>
+      </a>
+    </li>
+  </ul>
+
+  <div class="rule white ml-5 mt-7">&nbsp;</div>
+
+  <ul class="list-unstyled">
+    <!-- <li tabindex="0" class="d-flex align-items-center settings-link">
+      <a href="#" class="ml-4 secondary-3" tabindex="-1">Settings</a>
+    </li> -->
+    <li tabindex="0" class="d-flex align-items-center settings-link">
+      <a href="#" class="ml-5 secondary-3" tabindex="-1">Log Out</a>
+    </li>
+  </ul>
+
+</nav>
+
+
+  <!-- Page Content  -->
+  <section id="content" class="pb-8">
+
+    <nav class="navbar navbar-expand-lg bg-secondary d-lg-none hamburger-menu">
+  <div class="container-fluid">
+    <button type="button" id="sidebarCollapse" class="">
+      <img src="../../images/hamburger.svg" alt="Homepage Icon" class="sidebar-icon mr-2 default">
+    </button>
+  </div>
+</nav>
+
+
+    <div class="container greeting pt-7">
+  <div class="row">
+    <div class="col-md-6 col-xl-7 px-0 d-flex align-self-end">
+      <h1 class="display4 text-secondary">Good Morning, Joy! It’s been a productive day.</h1>
+    </div>
+    <div class="col-md-6 col-xl-5 text-right px-0 pr-md-5 mt-4">
+      <button type="button" class="btn mt-4 mt-md-0" data-toggle="modal" data-target="#newSale"
+        data-backdrop="false">Run
+        New Sale</button>
+      <button type="button" class="btn btn-secondary mt-4 mt-md-0 ml-md-3" data-toggle="modal"
+        data-target="#customerCreateInvoice" data-backdrop="false">Create Invoice</button>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container carousel-home-cont px-0 mt-7 mb-8">
+  <div id="carousel-home" class="carousel slide carousel-fade px-0" data-ride="carousel">
+
+
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-home" data-slide-to="1" class=""></li>
+      <li data-target="#carousel-home" data-slide-to="2" class=""></li>
+      <li data-target="#carousel-home" data-slide-to="3" class=""></li>
+    </ol>
+
+    <div class="carousel-inner">
+
+      <a href="javascript:;" class="d-block caro-close">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+          <title>Close</title>
+          <desc>Created with Sketch.</desc>
+          <g id="Component-Library" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Alerts" transform="translate(-1212.000000, -175.000000)" fill="#FFFFFF" fill-rule="nonzero">
+              <g id="Information-class-alert" transform="translate(509.000000, 161.000000)">
+                <path
+                  d="M708.697065,21.0765205 C708.598533,20.9779879 708.401467,20.9779879 708.302935,21.0765205 L704.509433,24.8700228 C704.361634,25.0178216 704.01677,25.0670879 703.819705,24.8700228 L703.129977,24.1802951 C702.932912,23.9832301 702.982178,23.6383662 703.129977,23.4905674 L706.92348,19.6970651 C707.022012,19.5985325 707.022012,19.4014675 706.92348,19.3029349 L703.129977,15.5094326 C702.982178,15.3616338 702.932912,15.0167699 703.129977,14.8197049 L703.819705,14.1299772 C704.01677,13.9329121 704.361634,13.9821784 704.509433,14.1299772 L708.302935,17.9234795 C708.401467,18.0220121 708.598533,18.0220121 708.697065,17.9234795 L712.490567,14.1299772 C712.638366,13.9821784 712.98323,13.9329121 713.180295,14.1299772 L713.870023,14.8197049 C714.067088,15.0167699 714.017822,15.3616338 713.870023,15.5094326 L710.07652,19.3029349 C709.977988,19.4014675 709.977988,19.5985325 710.07652,19.6970651 L713.870023,23.4905674 C714.017822,23.6383662 714.067088,23.9832301 713.870023,24.1802951 L713.180295,24.8700228 C712.98323,25.0670879 712.638366,25.0178216 712.490567,24.8700228 L708.697065,21.0765205 Z"
+                  id="Close"></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </a>
+
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-sm-11 col-md-6 pr-sm-0 primary-3 d-flex justify-content-center">
+            <div class="copy-wrap my-9 m-8 ml-sm-9 mr-sm-0">
+              <p class="display6 medium uppercase mb-3">Make your first sale</p>
+              <p class="display3 light">Run a sale seamlessly with Virtual Terminal.</p>
+              <button type="button" class="btn btn-secondary btn-dark my-3">Start a Sale</button>
+            </div>
+          </div>
+          <div class="col-sm-6 pl-sm-0 primary-3 d-none d-md-flex justify-content-center">
+            <img src="..&#x2F;..&#x2F;images&#x2F;line-drawing-1.svg" class="d-block carousel-img" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item ">
+        <div class="row">
+          <div class="col-sm-11 col-md-6 pr-sm-0 primary-3 d-flex justify-content-center">
+            <div class="copy-wrap my-9 m-8 ml-sm-9 mr-sm-0">
+              <p class="display6 medium uppercase mb-3">Manage your transactions</p>
+              <p class="display3 light">View, search and download your sales and deposit reports.</p>
+              <button type="button" class="btn btn-secondary btn-dark my-3">View sales report</button>
+            </div>
+          </div>
+          <div class="col-sm-6 pl-sm-0 primary-3 d-none d-md-flex justify-content-center">
+            <img src="..&#x2F;..&#x2F;images&#x2F;line-drawing-2.svg" class="d-block carousel-img" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item ">
+        <div class="row">
+          <div class="col-sm-11 col-md-6 pr-sm-0 primary-3 d-flex justify-content-center">
+            <div class="copy-wrap my-9 m-8 ml-sm-9 mr-sm-0">
+              <p class="display6 medium uppercase mb-3">Find the answers you need</p>
+              <p class="display3 light">Take advantage of live chat, FAQs and demos.</p>
+              <button type="button" class="btn btn-secondary btn-dark my-3">Explore support</button>
+            </div>
+          </div>
+          <div class="col-sm-6 pl-sm-0 primary-3 d-none d-md-flex justify-content-center">
+            <img src="..&#x2F;..&#x2F;images&#x2F;line-drawing-3.svg" class="d-block carousel-img" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item ">
+        <div class="row">
+          <div class="col-sm-11 col-md-6 pr-sm-0 primary-3 d-flex justify-content-center">
+            <div class="copy-wrap my-9 m-8 ml-sm-9 mr-sm-0">
+              <p class="display6 medium uppercase mb-3">Generate payments</p>
+              <p class="display3 light">Create, preview and send invoices with ease.</p>
+              <button type="button" class="btn btn-secondary btn-dark my-3">Get started</button>
+            </div>
+          </div>
+          <div class="col-sm-6 pl-sm-0 primary-3 d-none d-md-flex justify-content-center">
+            <img src="..&#x2F;..&#x2F;images&#x2F;line-drawing-4.svg" class="d-block carousel-img" alt="">
+          </div>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="javascript:;" data-target="#carousel-home" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="javascript:;" data-target="#carousel-home" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+
+    <div class="container home-module week pl-lg-0 mt-7">
+  <div class="line my-0"></div>
+  <div class="row h-100 data-chart">
+    <div class="col-md-4">
+      <div class="col-f-1 mt-7 ml-md-7 display6 uppercase bold secondary-1">Deposits</div>
+      <div class="col-f-1 ml-md-7 pt-md-4">
+        <div class="display7 bold mt-5">LAST DEPOSIT</div>
+        <div class="display1 secondary-4 mt-4">$456.89</div>
+        <div class="display6 regular mt-4">Wednesday, Dec 12 at 2:35pm</div>
+      </div>
+      <div class="col-f-1 text-center text-sm-left pt-md-2">
+        <button type="button" class="mt-5 mb-3 mx-md-7 btn btn-secondary w-sm-100">VIEW DEPOSITS</button>
+      </div>
+    </div>
+    <div class="col-md-8 d-flex flex-column align-items-end">
+
+      <div class="col-f-1 tab-content w-100 pt-2" id="pills-tabContent" >
+        <div class="tab-pane fade show active" id="pills-week" role="tabpanel" aria-labelledby="pills-week-tab">
+          <div class="ct-chart ct-week" id="ct-week"></div>
+        </div>
+        <div class="tab-pane fade" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
+          <div class="ct-chart ct-month" id="ct-month"></div>
+        </div>
+        <div class="tab-pane fade" id="pills-quarter" role="tabpanel" aria-labelledby="pills-quarter-tab">
+          <div class="ct-chart ct-quarter" id="ct-quarter"></div>
+        </div>
+        <div class="tab-pane fade" id="pills-year" role="tabpanel" aria-labelledby="pills-year-tab">
+          <div class="ct-chart ct-year" id="ct-year"></div>
+        </div>
+      </div>
+
+      <ul class="col-f-1 nav nav-pills mb-3 w-100 justify-content-center" id="pills-tab" role="tablist" >
+        <li class="nav-item">
+          <a class="nav-link data-chart-nav active display7 bold secondary-1" id="pills-week-tab" data-toggle="pill" href="#pills-week" role="tab" aria-controls="pills-week" aria-selected="true">WEEK</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link data-chart-nav display7 bold secondary-1" id="pills-month-tab" data-toggle="pill" href="#pills-month" role="tab" aria-controls="pills-month" aria-selected="false">MONTH</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link data-chart-nav display7 bold secondary-1" id="pills-quarter-tab" data-toggle="pill" href="#pills-quarter" role="tab" aria-controls="pills-quarter" aria-selected="false">QUARTER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link data-chart-nav display7 bold secondary-1" id="pills-year-tab" data-toggle="pill" href="#pills-year" role="tab" aria-controls="pills-year" aria-selected="false">YEAR</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+    <div class="container home-module pl-lg-0 mt-8">
+  <div class="line my-0"></div>
+  <div class="row data-sales">
+    <div class="col-md-2 align-self-center my-5">
+      <div class="ml-md-7 display6 uppercase bold secondary-1">Sales</div>
+    </div>
+    <div class="col-md-7 pr-md-0">
+      <div class="sales-type d-flex flex-column flex-md-row">
+        <div class="col pl-4 ct">
+          <div class="col-inner my-2 d-flex justify-content-between flex-row flex-md-column w-100">
+            <div class="label align-self-center align-self-md-start">CARDX TERMINAL</div>
+            <div class="display2 mt-3">28</div>
+          </div>
+        </div>
+        <div class="col pl-4 vt">
+          <div class="col-inner my-2 d-flex justify-content-between flex-row flex-md-column w-100">
+            <div class="label align-self-center align-self-md-start">VIRTUAL TERMINAL</div>
+            <div class="display2 mt-3">18</div>
+          </div>
+        </div>
+        <div class="col pl-4 lb">
+          <div class="col-inner my-2 d-flex justify-content-between flex-row flex-md-column w-100">
+            <div class="label align-self-center align-self-md-start">LIGHTBOX</div>
+            <div class="display2 mt-3">11</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 align-self-center text-center">
+      <button type="button" class="btn btn-secondary w-sm-100 sales-button">View Sales</button>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container home-module pl-lg-0 mt-8">
+  <div class="line my-0"></div>
+  <div class="row">
+    <div class="col-md-2 align-self-top mt-7">
+      <div class="ml-md-7 secondary-1 uppercase bold display6">For you</div>
+    </div>
+    <div class="col-md-4 d-flex flex-column text-primary my-2 my-md-7">
+      <div class="display5 regular">Lorem ipsum dolores</div>
+      <div class="my-2 flex-grow-1">Fusce nulla erat, vehicula at lacus sed, placerat vestibulum leo. Nullam at lobortis eros, in lobortis enim. Nunc nec enim a nibh gravida vehicula et ornare elit. </div>
+      <div class=""><a href="#" class="bold">Read More</a></div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-4 d-flex flex-column text-primary my-7">
+      <div class="display5 regular">Lorem ipsum dolores</div>
+      <div class="my-2 flex-grow-1">Fusce nulla erat,  in lobortis enim. Nunc nec enim a nibh gravida vehicula et ornare elit. </div>
+      <div class=""><a href="#" class="bold">Read More</a></div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
+
+
+  </section>
+
+  <!-- Dark Overlay  -->
+  <div class="overlay"></div>
+
+</div>

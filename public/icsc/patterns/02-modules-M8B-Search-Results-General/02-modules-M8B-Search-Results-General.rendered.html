@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <meta name="format-detection" content="telephone=no">
+
+
+  <link rel="stylesheet" href="../../assets/css/style.css?1695350198885" />
+  <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1695350198885" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="../../assets/css/jquery-ui.theme.min.css">
+
+  <link rel="stylesheet" media="print" href="../../assets/css/print.css">
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+  <!-- never cache patterns -->
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1695350198885" media="all">
+  <link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1695350198885" media="all" />
+
+  <!-- End Pattern Lab -->
+
+  <!-- Font Inclusion -->
+  <!-- <script type="text/javascript" src="//fast.fonts.net/jsapi/b9d7a925-1632-4db0-a4a5-01f99e38c7fc.js"></script> -->
+
+</head>
+
+<body class="">
+
+
+
+
+  <!-- Filters Mobile -->
+  <div class="container-fluid hidden-md-up pt-3 pb-3 bg-gray-ultra-light">
+    <div class="container no-xs-guts">
+      <ul class="nav nav-pills listing-filters d-flex justify-content-start pt-md-6 pb-md-4">
+        <li class="nav-item btn-filter small mr-auto py-2 px-2 my-auto my-auto d-flex align-self-center" data-toggle="collapse" href="#filterPanel" aria-expanded="false" aria-controls="filterPanel">
+          <span class="mr-2 pl-3 display9 align-self-center">Filter</span>
+        </li>
+        <li class="nav-item cards hidden-sm-down border-right-0">
+          <span></span>
+        </li>
+        <li class="nav-item dropdown d-inline-block my-auto mr-1 align-self-center">
+          <a aria-expanded="false" aria-haspopup="true" class="nav-link sort-list small display9 p-0" data-toggle="dropdown" href="#">Best match</a>
+          <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right m-0 mt-2 px-2">
+            <a class="dropdown-item display8 my-3 pl-3 text-right accent" href="#">Date</a>
+            <a class="dropdown-item display8 my-3 pl-3 text-right " href="#">Distance</a>
+            <a class="dropdown-item display8 my-3 pl-3 text-right" href="#">Favorite</a>
+          </div>
+        </li>
+        <li class="nav-item cards border-right-0 my-auto">
+          <a class="nav-link" data-toggle="pill" href="#cards" role="tab"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- Filters Desktop -->
+  <div class="container-fluid hidden-sm-down">
+    <div class="container">
+      <ul class="nav nav-pills listing-filters d-flex justify-content-start pt-md-6 pb-md-2">
+        <li class="nav-item btn-filter mr-auto py-2 px-3 my-auto my-auto d-flex align-self-center" data-toggle="collapse" href="#filterPanel" aria-expanded="false" aria-controls="filterPanel">
+          <span class="mr-3 pl-3 align-self-center">Filter</span>
+        </li>
+        <li class="nav-item cards hidden-sm-down border-right-0">
+          <span></span>
+        </li>
+        <li class="nav-item dropdown d-inline-block my-md-auto mr-md-5 align-self-center">
+          <a aria-expanded="false" aria-haspopup="true" class="nav-link sort-list display8 p-0" data-toggle="dropdown" href="#">Best match</a>
+          <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right m-0 mt-2 px-2 align-self-start">
+            <a class="dropdown-item display8 my-3 pl-3 accent" href="#">Best match</a>
+            <a class="dropdown-item display8 my-3 pl-3" href="#">Recently Added</a>
+            <a class="dropdown-item display8 my-3 pl-3" href="#">Popularity</a>
+            <a class="dropdown-item display8 my-3 pl-3" href="#">Title (A-Z)</a>
+            <a class="dropdown-item display8 my-3 pl-3" href="#">Title (Z-A)</a>
+          </div>
+        </li>
+        <li class="nav-item cards hidden-sm-down border-right-0 my-auto">
+          <a class="nav-link" data-toggle="pill" href="#cards" role="tab"></a>
+        </li>
+        <li class="nav-item list hidden-sm-down my-auto">
+          <a class="nav-link active" data-toggle="pill" href="#list-items" role="tab"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- Filter Tabs -->
+  <div class="container">
+    <div class="row pb-2">
+      <div class="col-md-3 filter-card">
+        <div class="filter-card my-md-2 py-0 px-2 bg-gray-light d-flex align-items-center">
+          <p class="flt-card-copy display9 d-inline-block my-2 my-md-2 p-0 mr-2 d9-truncate2"><strong>Business Type</strong>: Bldg Matl's / Struct / Prod &amp; Supp</p>
+          <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;clear-button.svg" alt="Clear" aria-label="Clear" aria-hidden="true" class="clear ml-auto" />
+        </div>
+      </div>
+      <div class="col-md-3 filter-card">
+        <div class="filter-card my-md-2 py-0 px-2 bg-gray-light d-flex align-items-center">
+          <p class="flt-card-copy display9 d-inline-block my-2 my-md-2 p-0 mr-2 d9-truncate2"><strong>Region/Language</strong>: Spanish Language Publications</p>
+          <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;clear-button.svg" alt="Clear" aria-label="Clear" aria-hidden="true" class="clear ml-auto" />
+        </div>
+      </div>
+      <div class="col-md-3 filter-card">
+        <div class="filter-card my-md-2 py-0 px-2 bg-gray-light d-flex align-items-center">
+          <p class="flt-card-copy display9 d-inline-block my-2 my-md-2 p-0 mr-2 d9-truncate2"><strong>Region/Language</strong>: Entertainment / Amusement Systems, Products, Services</p>
+          <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;clear-button.svg" alt="Clear" aria-label="Clear" aria-hidden="true" class="clear ml-auto" />
+        </div>
+      </div>
+      <div class="col-md-3 filter-card">
+        <div class="filter-card my-md-2 py-0 px-2 bg-gray-light d-flex align-items-center">
+          <p class="flt-card-copy display9 d-inline-block my-2 my-md-2 p-0 mr-2 d9-truncate2"><strong>Region/Language</strong>: Roofing Systems, Equipment, Services and Supplies</p>
+          <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;clear-button.svg" alt="Clear" aria-label="Clear" aria-hidden="true" class="clear ml-auto" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Filter Panel -->
+  <div class="container-fluid collapse bg-gray-dark filter-panel" id="filterPanel">
+
+    <div class="container py-4 no-xs-guts">
+
+      <!-- Button Bar -->
+      <ul class="nav nav-pills d-flex mb-4 justify-content-end">
+        <li class="nav-item"><button class="btn btn-tertiary display9 mr-4">Apply</button></li>
+        <li class="nav-item"><button class="btn btn-tertiary display9 mr-4">Reset</button></li>
+        <li class="nav-item d-flex align-items-center"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></li>
+      </ul>
+
+
+      <!-- Facet-Group and Panel 1 -->
+      <a class="display6 d-block light facet-group pb-3 collapsed" data-toggle="collapse" href="#" data-target="#facet-group" aria-expanded="false" aria-controls="facet-group" data-parent="#accordion">
+        <span class="mr-3 ml-md-3 mr-md-5"></span>Business Type
+        <span class="filter-count text-white display9 ml-2">(16)</span>
+      </a>
+
+      <div class="collapse primary-panel" id="facet-group">
+        <div class="row light">
+          <div class="col">
+            <form class="my-3">
+              <div class="form-group row">
+
+                <!-- Facet Checkbox -->
+                <div class="col-2 col-sm-1">
+                  <div class="form-check">
+                    <label class="custom-control custom-checkbox fac-check">
+                      <input type="checkbox" class="custom-control-input indeterminate">
+                      <span class="custom-control-indicator"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Facet Link and Panel 1 -->
+                <a class="facetLink align-self-end col-10 col-sm-11" data-toggle="collapse" href="#" data-target="#facetPanel" aria-expanded="false" aria-controls="facetPanel">
+                  <label class="facet parent mt-1">Academic Institution</label>
+                </a>
+
+                <div class="collapse bg-gray w-100 facetPanel" id="facetPanel">
+                  <div class="row">
+                    <div class="col">
+                      <ul class="nav nav-pills d-flex justify-content-end mt-4">
+                        <li class="nav-item ml-4"><button class="btn btn-quaternary display9 mr-4">Select all</button></li>
+                        <li class="nav-item"><button class="btn btn-quaternary display9 mr-3">Deselect all</button></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="row pl-4 pt-4 pr-4 pb-4">
+
+                    <!-- Sub-Facet Col and Input -->
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-2 col-sm-1">
+                          <div class="form-check">
+                            <label class="custom-control custom-checkbox d-flex my-auto">
+                              <input type="checkbox" class="custom-control-input checked">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <label class="col-10 mb-0 mt-1 pl-3 pl-md-5 pl-lg-5">Ceiling Systems, products</label>
+                      </div>
+                      <div class="row">
+                        <div class="col-2 col-sm-1">
+                          <div class="form-check">
+                            <label class="custom-control custom-checkbox d-flex my-auto">
+                              <input type="checkbox" class="custom-control-input">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <label class="col-10 mb-0 mt-1 pl-3 pl-md-5 pl-lg-5">Communication Systems, products, services</label>
+                      </div>
+                    </div>
+
+                    <!-- Sub-Facet Col and Input -->
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-2 col-sm-1">
+                          <div class="form-check">
+                            <label class="custom-control custom-checkbox d-flex my-auto">
+                              <input type="checkbox" class="custom-control-input">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <label class="col-10 mb-0 mt-1 pl-3 pl-md-5 pl-lg-5">Ceiling Systems, products</label>
+                      </div>
+                      <div class="row">
+                        <div class="col-2 col-sm-1">
+                          <div class="form-check">
+                            <label class="custom-control custom-checkbox d-flex my-auto">
+                              <input type="checkbox" class="custom-control-input checked">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <label class="col-10 mb-0 mt-1 pl-3 pl-md-5 pl-lg-5">Communication Systems, products, services</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Facet Panel 1 -->
+
+
+                <!-- Facet Checkbox 2 no Panel -->
+                <div class="col-2 col-sm-1">
+                  <div class="form-check">
+                    <label class="custom-control custom-checkbox fac-check">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Facet Link 2 no Panel -->
+                <a class="col-10 col-sm-11 align-self-end">
+                  <label class="facetNoPanel mt-1">Academic Institution</label>
+                </a>
+
+                <!-- Facet Checkbox 3 no Panel -->
+                <div class="col-2 col-sm-1">
+                  <div class="form-check">
+                    <label class="custom-control custom-checkbox fac-check">
+                      <input type="checkbox" class="custom-control-input my-2">
+                      <span class="custom-control-indicator"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Facet Label 3 no Panel -->
+                <a class="col-10 col-sm-11 align-self-end">
+                  <label class="facetNoPanel mt-1">Academic Institution</label>
+                </a>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- End Facet-Group 1 -->
+
+
+      <!-- Facet-Group and Panel 2 -->
+      <a class="display6 d-block light facet-group pb-3 collapsed" data-toggle="collapse" href="#" data-target="#facet-group2" aria-expanded="false" aria-controls="facet-group2" data-parent="#accordion">
+        <span class="mr-3 ml-md-3 mr-md-5"></span>Date
+        <span class="filter-count text-white display9 ml-2">(16)</span>
+      </a>
+
+      <div class="collapse primary-panel" id="facet-group2">
+        <div class="row light">
+          <div class="col">
+            <form class="mb-4">
+              <div class="form-group row">
+
+                <div class="col-sm-5 offset-sm-1 offset-md-1 px-5 pl-sm-1 pr-sm-3 pl-md-4 pl-lg-3 pl-xl-0">
+                  <label for="example-date-input" class="col-form-label mt-3 py-2">From</label>
+                  <input class="form-control filter-input" type="date" value="2011-08-19" id="example-date-input">
+                </div>
+
+                <div class="col-sm-5 offset-sm-1 offset-md-1 px-5 pl-sm-1 pr-sm-3 pl-md-4 pl-lg-3 pl-xl-0">
+                  <label for="example-date-input" class="col-form-label mt-3 py-2">To</label>
+                  <input class="form-control filter-input" type="date" value="2011-08-19" id="example-date-input">
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- End Facet-Group 2 -->
+
+
+    </div>
+  </div>
+
+
+  <div class="container-fluid pt-4">
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active fade show" id="cards" role="tabpanel">
+        <div class="container">
+          <div class="mr-auto my-auto pb-4">
+            <span class="resultStats display9">Displaying 1-12 of 472</span>
+          </div>
+          <div class="row ">
+            <div class="col-md-6 col-lg-4">
+              <div class="card general-card">
+                <a href="#" class="card-link">
+
+                  <!-- If an image is available -->
+                  <img class="card-img-top w-100" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="">
+
+                  <!-- If no image is available, use this generic icon -->
+                  <!-- <div class="no-image bg-gray-lighter">
+      <img class="card-img-top w-100 no-image-icon" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="">
+    </div> -->
+
+                  <div class="card-block py-0">
+                    <p class="display9 secondary mt-4 mb-0 ">SCT</p>
+                    <h3 class="display6 bold d6-truncate3 truncate-lines card-title mt-2 mb-0">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    <p class="display8 d8-truncate1 secondary mt-3 mb-0">1 week ago</p>
+                  </div>
+                </a>
+                <div class="card-icons mt-3 p-3 w-100 d-flex justify-content-start">
+                  <p class="display9 mr-auto my-auto ml-3">Free for Members</p>
+
+                  <a tabindex="0" class="share share--facebook pt-2 mt-2 ml-auto" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true"></a>
+
+
+                  <!--card has two variations — data-placement for save icon is "bottom" on desktop, "left" on mobile-->
+                  <a tabindex="0" class="share share--save hidden-sm-down ml-3 mt-1" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                  <a tabindex="0" class="share share--save hidden-md-up ml-3 mt-1" data-toggle="popover" data-placement="left" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card general-card">
+                <a href="#" class="card-link">
+
+                  <!-- If an image is available -->
+                  <img class="card-img-top w-100" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="">
+
+                  <!-- If no image is available, use this generic icon -->
+                  <!-- <div class="no-image bg-gray-lighter">
+      <img class="card-img-top w-100 no-image-icon" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="">
+    </div> -->
+
+                  <div class="card-block py-0">
+                    <p class="display9 secondary mt-4 mb-0 ">SCT</p>
+                    <h3 class="display6 bold d6-truncate3 truncate-lines card-title mt-2 mb-0">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    <p class="display8 d8-truncate1 secondary mt-3 mb-0">1 week ago</p>
+                  </div>
+                </a>
+                <div class="card-icons mt-3 p-3 w-100 d-flex justify-content-start">
+                  <p class="display9 mr-auto my-auto ml-3">Free for Members</p>
+
+                  <a tabindex="0" class="share share--facebook pt-2 mt-2 ml-auto" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true"></a>
+
+
+                  <!--card has two variations — data-placement for save icon is "bottom" on desktop, "left" on mobile-->
+                  <a tabindex="0" class="share share--save hidden-sm-down ml-3 mt-1" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                  <a tabindex="0" class="share share--save hidden-md-up ml-3 mt-1" data-toggle="popover" data-placement="left" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card general-card">
+                <a href="#" class="card-link">
+
+                  <!-- If an image is available -->
+                  <img class="card-img-top w-100" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="">
+
+                  <!-- If no image is available, use this generic icon -->
+                  <!-- <div class="no-image bg-gray-lighter">
+      <img class="card-img-top w-100 no-image-icon" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="">
+    </div> -->
+
+                  <div class="card-block py-0">
+                    <p class="display9 secondary mt-4 mb-0 ">SCT</p>
+                    <h3 class="display6 bold d6-truncate3 truncate-lines card-title mt-2 mb-0">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    <p class="display8 d8-truncate1 secondary mt-3 mb-0">1 week ago</p>
+                  </div>
+                </a>
+                <div class="card-icons mt-3 p-3 w-100 d-flex justify-content-start">
+                  <p class="display9 mr-auto my-auto ml-3">Free for Members</p>
+
+                  <a tabindex="0" class="share share--facebook pt-2 mt-2 ml-auto" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true"></a>
+
+
+                  <!--card has two variations — data-placement for save icon is "bottom" on desktop, "left" on mobile-->
+                  <a tabindex="0" class="share share--save hidden-sm-down ml-3 mt-1" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                  <a tabindex="0" class="share share--save hidden-md-up ml-3 mt-1" data-toggle="popover" data-placement="left" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card general-card">
+                <a href="#" class="card-link">
+
+                  <!-- If an image is available -->
+                  <img class="card-img-top w-100" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="">
+
+                  <!-- If no image is available, use this generic icon -->
+                  <!-- <div class="no-image bg-gray-lighter">
+      <img class="card-img-top w-100 no-image-icon" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="">
+    </div> -->
+
+                  <div class="card-block py-0">
+                    <p class="display9 secondary mt-4 mb-0 ">SCT</p>
+                    <h3 class="display6 bold d6-truncate3 truncate-lines card-title mt-2 mb-0">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    <p class="display8 d8-truncate1 secondary mt-3 mb-0">1 week ago</p>
+                  </div>
+                </a>
+                <div class="card-icons mt-3 p-3 w-100 d-flex justify-content-start">
+                  <p class="display9 mr-auto my-auto ml-3">Free for Members</p>
+
+                  <a tabindex="0" class="share share--facebook pt-2 mt-2 ml-auto" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true"></a>
+
+
+                  <!--card has two variations — data-placement for save icon is "bottom" on desktop, "left" on mobile-->
+                  <a tabindex="0" class="share share--save hidden-sm-down ml-3 mt-1" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                  <a tabindex="0" class="share share--save hidden-md-up ml-3 mt-1" data-toggle="popover" data-placement="left" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card general-card">
+                <a href="#" class="card-link">
+
+                  <!-- If an image is available -->
+                  <img class="card-img-top w-100" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="">
+
+                  <!-- If no image is available, use this generic icon -->
+                  <!-- <div class="no-image bg-gray-lighter">
+      <img class="card-img-top w-100 no-image-icon" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="">
+    </div> -->
+
+                  <div class="card-block py-0">
+                    <p class="display9 secondary mt-4 mb-0 ">SCT</p>
+                    <h3 class="display6 bold d6-truncate3 truncate-lines card-title mt-2 mb-0">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    <p class="display8 d8-truncate1 secondary mt-3 mb-0">1 week ago</p>
+                  </div>
+                </a>
+                <div class="card-icons mt-3 p-3 w-100 d-flex justify-content-start">
+                  <p class="display9 mr-auto my-auto ml-3">Free for Members</p>
+
+                  <a tabindex="0" class="share share--facebook pt-2 mt-2 ml-auto" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true"></a>
+
+
+                  <!--card has two variations — data-placement for save icon is "bottom" on desktop, "left" on mobile-->
+                  <a tabindex="0" class="share share--save hidden-sm-down ml-3 mt-1" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                  <a tabindex="0" class="share share--save hidden-md-up ml-3 mt-1" data-toggle="popover" data-placement="left" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card general-card">
+                <a href="#" class="card-link">
+
+                  <!-- If an image is available -->
+                  <img class="card-img-top w-100" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="">
+
+                  <!-- If no image is available, use this generic icon -->
+                  <!-- <div class="no-image bg-gray-lighter">
+      <img class="card-img-top w-100 no-image-icon" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="">
+    </div> -->
+
+                  <div class="card-block py-0">
+                    <p class="display9 secondary mt-4 mb-0 ">SCT</p>
+                    <h3 class="display6 bold d6-truncate3 truncate-lines card-title mt-2 mb-0">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    <p class="display8 d8-truncate1 secondary mt-3 mb-0">1 week ago</p>
+                  </div>
+                </a>
+                <div class="card-icons mt-3 p-3 w-100 d-flex justify-content-start">
+                  <p class="display9 mr-auto my-auto ml-3">Free for Members</p>
+
+                  <a tabindex="0" class="share share--facebook pt-2 mt-2 ml-auto" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true"></a>
+
+
+                  <!--card has two variations — data-placement for save icon is "bottom" on desktop, "left" on mobile-->
+                  <a tabindex="0" class="share share--save hidden-sm-down ml-3 mt-1" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                  <a tabindex="0" class="share share--save hidden-md-up ml-3 mt-1" data-toggle="popover" data-placement="left" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card general-card">
+                <a href="#" class="card-link">
+
+                  <!-- If an image is available -->
+                  <img class="card-img-top w-100" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="">
+
+                  <!-- If no image is available, use this generic icon -->
+                  <!-- <div class="no-image bg-gray-lighter">
+      <img class="card-img-top w-100 no-image-icon" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="">
+    </div> -->
+
+                  <div class="card-block py-0">
+                    <p class="display9 secondary mt-4 mb-0 ">SCT</p>
+                    <h3 class="display6 bold d6-truncate3 truncate-lines card-title mt-2 mb-0">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    <p class="display8 d8-truncate1 secondary mt-3 mb-0">1 week ago</p>
+                  </div>
+                </a>
+                <div class="card-icons mt-3 p-3 w-100 d-flex justify-content-start">
+                  <p class="display9 mr-auto my-auto ml-3">Free for Members</p>
+
+                  <a tabindex="0" class="share share--facebook pt-2 mt-2 ml-auto" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true"></a>
+
+
+                  <!--card has two variations — data-placement for save icon is "bottom" on desktop, "left" on mobile-->
+                  <a tabindex="0" class="share share--save hidden-sm-down ml-3 mt-1" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                  <a tabindex="0" class="share share--save hidden-md-up ml-3 mt-1" data-toggle="popover" data-placement="left" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card general-card">
+                <a href="#" class="card-link">
+
+                  <!-- If an image is available -->
+                  <img class="card-img-top w-100" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="">
+
+                  <!-- If no image is available, use this generic icon -->
+                  <!-- <div class="no-image bg-gray-lighter">
+      <img class="card-img-top w-100 no-image-icon" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="">
+    </div> -->
+
+                  <div class="card-block py-0">
+                    <p class="display9 secondary mt-4 mb-0 ">SCT</p>
+                    <h3 class="display6 bold d6-truncate3 truncate-lines card-title mt-2 mb-0">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    <p class="display8 d8-truncate1 secondary mt-3 mb-0">1 week ago</p>
+                  </div>
+                </a>
+                <div class="card-icons mt-3 p-3 w-100 d-flex justify-content-start">
+                  <p class="display9 mr-auto my-auto ml-3">Free for Members</p>
+
+                  <a tabindex="0" class="share share--facebook pt-2 mt-2 ml-auto" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true"></a>
+
+
+                  <!--card has two variations — data-placement for save icon is "bottom" on desktop, "left" on mobile-->
+                  <a tabindex="0" class="share share--save hidden-sm-down ml-3 mt-1" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                  <a tabindex="0" class="share share--save hidden-md-up ml-3 mt-1" data-toggle="popover" data-placement="left" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card general-card">
+                <a href="#" class="card-link">
+
+                  <!-- If an image is available -->
+                  <img class="card-img-top w-100" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="">
+
+                  <!-- If no image is available, use this generic icon -->
+                  <!-- <div class="no-image bg-gray-lighter">
+      <img class="card-img-top w-100 no-image-icon" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="">
+    </div> -->
+
+                  <div class="card-block py-0">
+                    <p class="display9 secondary mt-4 mb-0 ">SCT</p>
+                    <h3 class="display6 bold d6-truncate3 truncate-lines card-title mt-2 mb-0">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    <p class="display8 d8-truncate1 secondary mt-3 mb-0">1 week ago</p>
+                  </div>
+                </a>
+                <div class="card-icons mt-3 p-3 w-100 d-flex justify-content-start">
+                  <p class="display9 mr-auto my-auto ml-3">Free for Members</p>
+
+                  <a tabindex="0" class="share share--facebook pt-2 mt-2 ml-auto" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true"></a>
+
+
+                  <!--card has two variations — data-placement for save icon is "bottom" on desktop, "left" on mobile-->
+                  <a tabindex="0" class="share share--save hidden-sm-down ml-3 mt-1" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                  <a tabindex="0" class="share share--save hidden-md-up ml-3 mt-1" data-toggle="popover" data-placement="left" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card general-card">
+                <a href="#" class="card-link">
+
+                  <!-- If an image is available -->
+                  <img class="card-img-top w-100" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="">
+
+                  <!-- If no image is available, use this generic icon -->
+                  <!-- <div class="no-image bg-gray-lighter">
+      <img class="card-img-top w-100 no-image-icon" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="">
+    </div> -->
+
+                  <div class="card-block py-0">
+                    <p class="display9 secondary mt-4 mb-0 ">SCT</p>
+                    <h3 class="display6 bold d6-truncate3 truncate-lines card-title mt-2 mb-0">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    <p class="display8 d8-truncate1 secondary mt-3 mb-0">1 week ago</p>
+                  </div>
+                </a>
+                <div class="card-icons mt-3 p-3 w-100 d-flex justify-content-start">
+                  <p class="display9 mr-auto my-auto ml-3">Free for Members</p>
+
+                  <a tabindex="0" class="share share--facebook pt-2 mt-2 ml-auto" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true"></a>
+
+
+                  <!--card has two variations — data-placement for save icon is "bottom" on desktop, "left" on mobile-->
+                  <a tabindex="0" class="share share--save hidden-sm-down ml-3 mt-1" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                  <a tabindex="0" class="share share--save hidden-md-up ml-3 mt-1" data-toggle="popover" data-placement="left" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card general-card">
+                <a href="#" class="card-link">
+
+                  <!-- If an image is available -->
+                  <img class="card-img-top w-100" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="">
+
+                  <!-- If no image is available, use this generic icon -->
+                  <!-- <div class="no-image bg-gray-lighter">
+      <img class="card-img-top w-100 no-image-icon" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="">
+    </div> -->
+
+                  <div class="card-block py-0">
+                    <p class="display9 secondary mt-4 mb-0 ">SCT</p>
+                    <h3 class="display6 bold d6-truncate3 truncate-lines card-title mt-2 mb-0">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    <p class="display8 d8-truncate1 secondary mt-3 mb-0">1 week ago</p>
+                  </div>
+                </a>
+                <div class="card-icons mt-3 p-3 w-100 d-flex justify-content-start">
+                  <p class="display9 mr-auto my-auto ml-3">Free for Members</p>
+
+                  <a tabindex="0" class="share share--facebook pt-2 mt-2 ml-auto" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true"></a>
+
+
+                  <!--card has two variations — data-placement for save icon is "bottom" on desktop, "left" on mobile-->
+                  <a tabindex="0" class="share share--save hidden-sm-down ml-3 mt-1" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                  <a tabindex="0" class="share share--save hidden-md-up ml-3 mt-1" data-toggle="popover" data-placement="left" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card general-card">
+                <a href="#" class="card-link">
+
+                  <!-- If an image is available -->
+                  <img class="card-img-top w-100" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="">
+
+                  <!-- If no image is available, use this generic icon -->
+                  <!-- <div class="no-image bg-gray-lighter">
+      <img class="card-img-top w-100 no-image-icon" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="">
+    </div> -->
+
+                  <div class="card-block py-0">
+                    <p class="display9 secondary mt-4 mb-0 ">SCT</p>
+                    <h3 class="display6 bold d6-truncate3 truncate-lines card-title mt-2 mb-0">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    <p class="display8 d8-truncate1 secondary mt-3 mb-0">1 week ago</p>
+                  </div>
+                </a>
+                <div class="card-icons mt-3 p-3 w-100 d-flex justify-content-start">
+                  <p class="display9 mr-auto my-auto ml-3">Free for Members</p>
+
+                  <a tabindex="0" class="share share--facebook pt-2 mt-2 ml-auto" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true"></a>
+
+
+                  <!--card has two variations — data-placement for save icon is "bottom" on desktop, "left" on mobile-->
+                  <a tabindex="0" class="share share--save hidden-sm-down ml-3 mt-1" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                  <a tabindex="0" class="share share--save hidden-md-up ml-3 mt-1" data-toggle="popover" data-placement="left" data-trigger="focus" data-html="true" title="
+         <div class='bg-gray-dark p-2'>
+            <a href='#' target='_self' class='light'>Log In to Save</a>
+         </div>
+      "></a>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane " id="list-items" role="tabpanel">
+        <div class="tab-pane" id="cards" role="tabpanel">
+          <div class="container no-xs-guts">
+            <div class="mr-auto my-auto pb-3">
+              <span class="resultStats display9">Displaying 1-12 of 472</span>
+            </div>
+
+            <div class="list-card py-4 my-0 w-100">
+              <div class="row">
+                <div class="col-2 col-md-1 my-0 pt-1">
+
+                  <!-- Thumbnail Image Version, if there IS an available image -->
+                  <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="General Image" class="px-0 py-2 card-img-right">
+
+                  <!-- Download Icon Version, if there is no available image -->
+                  <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="General Image" class="px-2 pt-2 card-img-right download bg-gray-lightest hidden-xl-down">
+
+                </div>
+                <div class="col-10 col-md-8 d-flex align-items-center">
+                  <div class="card-block m-0 ml-md-3 p-0 pl-2 pl-sm-0 pl-md-3">
+                    <a href="#">
+                      <h3 class="card-title mt-1 mb-0 ml-0 mx-0 py-0 display8 bold d7-truncate2 truncate-lines">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    </a>
+                    <p class="display9 secondary mt-1 p-0">SCT - 1 week ago</p>
+                    <p class="display9 mr-auto ml-auto my-auto hidden-sm-down">Free for Members</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2 hidden-md-up">&nbsp;</div>
+                <div class="col-10 col-md-2 gen-list-item-icons justify-content-start justify-content-lg-end d-inline-flex align-items-center pl-3 py-0">
+                  <img class="mr-5 ml-2 ml-sm-0" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;icon-share.svg" alt="Share Icon">
+                  <img class="" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;icon-save.svg" alt="Favorite Icon">
+                  <p class="display9 ml-auto my-auto hidden-md-up">Free for Members</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="list-card py-4 my-0 w-100">
+              <div class="row">
+                <div class="col-2 col-md-1 my-0 pt-1">
+
+                  <!-- Thumbnail Image Version, if there IS an available image -->
+                  <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="General Image" class="px-0 py-2 card-img-right">
+
+                  <!-- Download Icon Version, if there is no available image -->
+                  <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="General Image" class="px-2 pt-2 card-img-right download bg-gray-lightest hidden-xl-down">
+
+                </div>
+                <div class="col-10 col-md-8 d-flex align-items-center">
+                  <div class="card-block m-0 ml-md-3 p-0 pl-2 pl-sm-0 pl-md-3">
+                    <a href="#">
+                      <h3 class="card-title mt-1 mb-0 ml-0 mx-0 py-0 display8 bold d7-truncate2 truncate-lines">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    </a>
+                    <p class="display9 secondary mt-1 p-0">SCT - 1 week ago</p>
+                    <p class="display9 mr-auto ml-auto my-auto hidden-sm-down">Free for Members</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2 hidden-md-up">&nbsp;</div>
+                <div class="col-10 col-md-2 gen-list-item-icons justify-content-start justify-content-lg-end d-inline-flex align-items-center pl-3 py-0">
+                  <img class="mr-5 ml-2 ml-sm-0" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;icon-share.svg" alt="Share Icon">
+                  <img class="" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;icon-save.svg" alt="Favorite Icon">
+                  <p class="display9 ml-auto my-auto hidden-md-up">Free for Members</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="list-card py-4 my-0 w-100">
+              <div class="row">
+                <div class="col-2 col-md-1 my-0 pt-1">
+
+                  <!-- Thumbnail Image Version, if there IS an available image -->
+                  <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="General Image" class="px-0 py-2 card-img-right">
+
+                  <!-- Download Icon Version, if there is no available image -->
+                  <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="General Image" class="px-2 pt-2 card-img-right download bg-gray-lightest hidden-xl-down">
+
+                </div>
+                <div class="col-10 col-md-8 d-flex align-items-center">
+                  <div class="card-block m-0 ml-md-3 p-0 pl-2 pl-sm-0 pl-md-3">
+                    <a href="#">
+                      <h3 class="card-title mt-1 mb-0 ml-0 mx-0 py-0 display8 bold d7-truncate2 truncate-lines">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    </a>
+                    <p class="display9 secondary mt-1 p-0">SCT - 1 week ago</p>
+                    <p class="display9 mr-auto ml-auto my-auto hidden-sm-down">Free for Members</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2 hidden-md-up">&nbsp;</div>
+                <div class="col-10 col-md-2 gen-list-item-icons justify-content-start justify-content-lg-end d-inline-flex align-items-center pl-3 py-0">
+                  <img class="mr-5 ml-2 ml-sm-0" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;icon-share.svg" alt="Share Icon">
+                  <img class="" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;icon-save.svg" alt="Favorite Icon">
+                  <p class="display9 ml-auto my-auto hidden-md-up">Free for Members</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="list-card py-4 my-0 w-100">
+              <div class="row">
+                <div class="col-2 col-md-1 my-0 pt-1">
+
+                  <!-- Thumbnail Image Version, if there IS an available image -->
+                  <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;article-thumb-FPO@2x.png" alt="General Image" class="px-0 py-2 card-img-right">
+
+                  <!-- Download Icon Version, if there is no available image -->
+                  <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;download-icon.svg" alt="General Image" class="px-2 pt-2 card-img-right download bg-gray-lightest hidden-xl-down">
+
+                </div>
+                <div class="col-10 col-md-8 d-flex align-items-center">
+                  <div class="card-block m-0 ml-md-3 p-0 pl-2 pl-sm-0 pl-md-3">
+                    <a href="#">
+                      <h3 class="card-title mt-1 mb-0 ml-0 mx-0 py-0 display8 bold d7-truncate2 truncate-lines">ICSC Meets with Key DC Influencers on Tax Reform</h3>
+                    </a>
+                    <p class="display9 secondary mt-1 p-0">SCT - 1 week ago</p>
+                    <p class="display9 mr-auto ml-auto my-auto hidden-sm-down">Free for Members</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2 hidden-md-up">&nbsp;</div>
+                <div class="col-10 col-md-2 gen-list-item-icons justify-content-start justify-content-lg-end d-inline-flex align-items-center pl-3 py-0">
+                  <img class="mr-5 ml-2 ml-sm-0" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;icon-share.svg" alt="Share Icon">
+                  <img class="" src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;icon-save.svg" alt="Favorite Icon">
+                  <p class="display9 ml-auto my-auto hidden-md-up">Free for Members</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav aria-label="Page Navigation">
+      <ul class="pagination justify-content-center m-0 pt-4 pb-5">
+        <li class="page-item">
+          <a class="page-link h-100" href="#" aria-label="Previous">
+            <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;back-arrow.svg" alt="Pagination Arrow" aria-hidden="true" class="single disabled">
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link h-100" href="#" aria-label="Previous">
+            <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;arrow-double-back.svg" alt="Pagination Arrow" aria-hidden="true" class="double disabled">
+          </a>
+        </li>
+        <li class="page-item">
+          <span class="page-link h-100 hits display9 secondary active no-hover d-inline-block">1 of 265</span>
+        </li>
+        <li class="page-item">
+          <a class="page-link h-100" href="#" aria-label="Next">
+            <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;arrow-double-forward.svg" alt="Pagination Arrow" aria-hidden="true" class="double">
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link h-100" href="#somethng" aria-label="Next">
+            <img src="..&#x2F;..&#x2F;assets&#x2F;images&#x2F;forward.svg" alt="Pagination Arrow" aria-hidden="true" class="single">
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+
+  </div>
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+    {
+      "cssEnabled": false,
+      "patternLineageExists": true,
+      "patternLineages": [{
+        "lineagePattern": "components-C56-Filter-Panel",
+        "lineagePath": "../../patterns/01-components-C56-Filter-Panel/01-components-C56-Filter-Panel.rendered.html"
+      }, {
+        "lineagePattern": "components-C25A-General-Card",
+        "lineagePath": "../../patterns/01-components-C25A-General-Card/01-components-C25A-General-Card.rendered.html"
+      }, {
+        "lineagePattern": "components-C25B-General-List",
+        "lineagePath": "../../patterns/01-components-C25B-General-List/01-components-C25B-General-List.rendered.html"
+      }, {
+        "lineagePattern": "components-C55-Pagination",
+        "lineagePath": "../../patterns/01-components-C55-Pagination/01-components-C55-Pagination.rendered.html"
+      }],
+      "lineage": [{
+        "lineagePattern": "components-C56-Filter-Panel",
+        "lineagePath": "../../patterns/01-components-C56-Filter-Panel/01-components-C56-Filter-Panel.rendered.html"
+      }, {
+        "lineagePattern": "components-C25A-General-Card",
+        "lineagePath": "../../patterns/01-components-C25A-General-Card/01-components-C25A-General-Card.rendered.html"
+      }, {
+        "lineagePattern": "components-C25B-General-List",
+        "lineagePath": "../../patterns/01-components-C25B-General-List/01-components-C25B-General-List.rendered.html"
+      }, {
+        "lineagePattern": "components-C55-Pagination",
+        "lineagePath": "../../patterns/01-components-C55-Pagination/01-components-C55-Pagination.rendered.html"
+      }],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": true,
+      "patternDesc": "<ul>\n<li>Contains only General Cards for this scope</li>\n<li>Use the generic article icon if no image is available (see styleguide)</li>\n<li>See C25A/C25B General Card and General List for more info</li>\n</ul>\n",
+      "patternBreadcrumb": {
+        "patternType": "modules"
+      },
+      "patternExtension": "mustache",
+      "patternName": "M8B Search Results (General Scope)",
+      "patternPartial": "modules-M8B-Search-Results-General",
+      "patternState": "",
+      "patternEngineName": "mustache",
+      "extraOutput": {}
+    }
+  </script>
+
+  <script>
+    /*!
+     * scriptLoader - v0.1
+     *
+     * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+     * Licensed under the MIT license
+     *
+     */
+
+    var scriptLoader = {
+
+      run: function(js, cb, target) {
+        var s = document.getElementById(target + '-' + cb);
+        for (var i = 0; i < js.length; i++) {
+          var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+          var c = document.createElement('script');
+          c.src = '../../' + src + '?' + cb;
+          if (typeof js[i] != 'string') {
+            if (js[i].dep !== undefined) {
+              c.onload = function(dep, cb, target) {
+                return function() {
+                  scriptLoader.run(dep, cb, target);
+                }
+              }(js[i].dep, cb, target);
+            }
+          }
+          s.parentNode.insertBefore(c, s);
+        }
+      }
+
+    }
+  </script>
+
+  <script id="pl-js-polyfill-insert-1695350198885">
+    (function() {
+      if (self != top) {
+        var cb = '1695350198885';
+        var js = [];
+        if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+          js.push('styleguide/bower_components/classList.min.js');
+        }
+        scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+      }
+    })();
+  </script>
+
+  <script id="pl-js-insert-1695350198885">
+    (function() {
+      if (self != top) {
+        var cb = '1695350198885';
+        var js = [{
+          'src': 'styleguide/bower_components/jwerty.min.js',
+          'dep': ['styleguide/js/patternlab-pattern.min.js']
+        }];
+        scriptLoader.run(js, cb, 'pl-js-insert');
+      }
+    })();
+  </script>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="../../assets/js/bootstrap.min.js"></script>
+
+  <!-- Some Patternlab Stuff, I figure -->
+  <script type="text/javascript" src="../../assets/js/overlay.js"></script>
+  <!-- Polyfill IE gray filter -->
+  <script type="text/javascript" src="../../assets/js/jquery.gray.min.js"></script>
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../../assets/js/custom.js"></script>
+
+</body>
+
+</html>

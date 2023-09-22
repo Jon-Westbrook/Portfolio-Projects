@@ -1,0 +1,123 @@
+{{!-- Put a trigger button when viewing the modal via the Modules menu.
+Otherwise, this button will usually be part of another module or component,
+and the modal will only be "triggerable" when looking at a full template.
+The trigger button should not normally be a part of the modal code. --}}
+{{# demo-button-modules-menu-only }}
+<button type="button" class="btn mx-4 mt-4" data-toggle="modal" data-target="#customerCreateInvoice"
+  data-backdrop="false">Create Invoice</button>
+{{/ demo-button-modules-menu-only }}
+
+<div class="modal fade modal-full" id="{{ id }}" tabindex="-1" role="dialog" aria-labelledby="{{ heading-page }}"
+  aria-hidden="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <!-- Mini-Header -->
+      <div class="container-fluid mini-header heading-row bg-primary-2">
+        <div class="container">
+          <div class="row h-100 py-5">
+            <div class="col-lg-11 col-xl-9 mx-auto heading-col d-flex flex-column flex-md-row align-items-center px-0">
+              <h1 class="primary-3">{{ heading-page }}</h1>
+              <div class="ml-auto nav nav-pills" role="tablist">
+                {{# btns-desktop-top }}
+                <button type="button" class="ml-4 {{ classes }}" data-dismiss="{{ data-dismiss }}" href="{{ href }}"
+                  role="{{ role }}" aria-controls="{{ aria-controls }}"
+                  aria-selected="{{ aria-selected }}">{{ btn-copy }}</button>
+                {{/ btns-desktop-top }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-header py-0 px-md-0">
+        <!-- Mobile Header -->
+        <div class="container h-100 d-md-none pl-0">
+          <div class="row h-100">
+            <div class="col-12 px-0 d-flex align-items-center">
+              <h1 class="primary-3 display4">{{ heading-page }}</h1>
+              <div class="ellipse-button">
+                <div>
+                  <a href="javascript:void(0);"
+                    class="mobile-ellipse-trigger display2 primary-3 d-flex align-items-center" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"><span class="d-inline-block caret ml-2">&nbsp;</span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    {{# menu-mobile }}
+                    <a href="{{ url }}" class="{{ classes }}" data-dismiss="{{ data-dismiss }}"
+                      aria-label="{{ aria-label }}">{{ btn-copy }}</a>
+                    {{/ menu-mobile }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Header image fade with object-fit -->
+        <img class="d-none d-md-block header-img h-100 w-100" src="../../images/modal-header.svg" />
+        <!-- Desktop Header -->
+        <div class="container d-none d-md-block h-100 heading-row">
+          <div class="row h-100">
+            <div class="col-lg-11 col-xl-9 mx-auto heading-col d-flex flex-column flex-md-row align-items-center px-0">
+              <h1 class="primary-3 invoice-page-heading">{{ heading-page }}</h1>
+              <div class="ml-auto nav nav-pills" role="tablist">
+                {{# btns-desktop-top }}
+                <button type="button" class="ml-4 {{ classes }}" data-dismiss="{{ data-dismiss }}" href="{{ href }}"
+                  role="{{ role }}" aria-controls="{{ aria-controls }}"
+                  aria-selected="{{ aria-selected }}">{{ btn-copy }}</button>
+                {{/ btns-desktop-top }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body pt-0 px-0 h-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-11 col-xl-9 mx-auto pb-8 mainBox">
+              <div class="tab-content" id="pills-tabContent">
+                {{# tab-panes }}
+                <div class="tab-pane fade {{ classes }}" id="{{ id }}" role="tab-panel"
+                  aria-labelledby="{{ aria-labelledby }}">
+                  <form class="w-100 needs-validation" novalidate>
+                    {{# sections }}
+
+                    {{# invoice-info }}
+                    {{> Components-C33-Invoice-Info }}
+                    {{/ invoice-info }}
+
+                    {{# invoice-details }}
+                    {{> Components-C34-Invoice-Details }}
+                    {{/ invoice-details }}
+
+                    {{# invoice-line-items }}
+                    {{> Components-C35-Invoice-Line-Items }}
+                    {{/ invoice-line-items }}
+
+                    {{# invoice-preview }}
+                    {{> Components-C36-Invoice-Preview }}
+                    {{/ invoice-preview }}
+
+                    {{/ sections }}
+                  </form>
+                </div>
+                {{/ tab-panes }}
+                <div class="row mt-8">
+                  <div class="col-md-10 offset-md-1 d-flex">
+                    <div class="ml-md-auto nav nav-pills btns-bottom d-flex flex-column-reverse d-sm-block"
+                      role="tablist">
+                      {{# btns-desktop-bottom }}
+                      <button type="button" class="mt-3 ml-0 mr-3 mr-md-0 ml-md-3 {{ classes }}"
+                        data-dismiss="{{ data-dismiss }}" href="{{ href }}" role="{{ role }}"
+                        aria-controls="{{ aria-controls }}" aria-selected="{{ aria-selected }}">{{ btn-copy }}</button>
+                      {{/ btns-desktop-bottom }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

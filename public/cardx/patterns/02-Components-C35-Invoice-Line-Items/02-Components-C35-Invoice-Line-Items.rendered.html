@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+  <title>CardX Design System</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- Site Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+  <!-- Chartist for Charts -->
+  <link rel="stylesheet" type="text/css" href="../../css/vendor/chartist.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/vendor/chartist-plugin-tooltip.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/vendor/chartist-plugin-legend.css" />
+
+  <!-- Data Tables -->
+  <link rel="stylesheet" type="text/css" href="../../css/vendor/scroller.bootstrap4.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/vendor/rowReorder.bootstrap4.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/vendor/dataTables.bootstrap4.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/vendor/responsive.bootstrap4.min.css" />
+
+  <!-- Date Picker -->
+  <link rel="stylesheet" type="text/css" href="../../css/vendor/jquery-ui.min.css" />
+
+  <!-- Custom SCSS Implementation -->
+  <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+  
+  <!-- End Pattern Lab -->
+
+</head>
+
+<body class="">
+<div class="row pt-6 pt-md-8">
+  <div class="col-md-10 offset-md-1 pb-4">
+    <h2 class="secondary-6 mb-6 mb-md-8"></h2>
+
+    <table id="invoice-edit-table" class="mb-0 display nowrap">
+      <thead class="bg-secondary-1 primary-3 label uppercase">
+        <tr>
+          <th><span class="pl-3">Seq.</span></th>
+          <th><span class="pl-1">Item Name</span></th>
+          <th><span class="pl-3">Quantity</span></th>
+          <th><span class="pl-3">Price</span></th>
+          <th><span class="pl-3">Total</span></th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+    </table>
+    <a href="#" class="small bold d-inline-block mt-3 add-additional"><span class="add-additional-icon"></span> Add
+      additional line</a>
+  </div>
+</div>
+
+<div class="row pb-6">
+  <div class="col-md-6 offset-md-1 pb-4">
+    &nbsp;
+  </div>
+  <div class="col-md-4">
+    <div class="row mx-0 px-0">
+      <div class="w-100 rule thin-gray">&nbsp;</div>
+      <div class="col-4 col-md-5 d-flex align-items-center">
+        <p class="label my-3">Discount</p>
+      </div>
+      <div class="col-6 d-flex align-items-center">
+        <p class="gray my-3">XX%</p>
+      </div>
+      <div class="w-100 rule thin-gray">&nbsp;</div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-4 col-md-5 d-flex align-items-center">
+        <p class="label my-3">Subtotal</p>
+      </div>
+      <div class="col-6 d-flex align-items-center">
+        <p class="gray my-3">$00.00</p>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-4 col-md-5 d-flex align-items-center">
+        <p class="label my-3">Tax</p>
+      </div>
+      <div class="col-6 d-flex align-items-center">
+        <p class="gray my-3">$00.00</p>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-4 col-md-5 d-flex align-items-center">
+        <p class="label my-3">Total</p>
+      </div>
+      <div class="col-6 d-flex align-items-center">
+        <p class="gray my-3">$00.00</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- I Rule -->
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div class="w-100 rule">&nbsp;</div>
+  </div>
+</div>
+<!-- Bootstrap and Dependencies -->
+<script src="../../js/vendor/jquery.min.js"></script>
+<script src="../../js/vendor/popper.min.js"></script>
+<script src="../../js/vendor/bootstrap.min.js"></script>
+
+<!-- Main Custom JS Entry Point -->
+<script type="module" src="../../js/index.js" crossorigin="anonymous"></script>
+
+<!-- Chartist for Charts -->
+<script src="../../js/vendor/chartist.min.js"></script>
+<script src="../../js/vendor/chartist-plugin-tooltip.js"></script>
+<script src="../../js/vendor/chartist-plugin-legend.js"></script>
+
+<!-- Datatables for Tables -->
+<script type="text/javascript" src="../../js/vendor/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/dataTables.rowReorder.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/dataTables.scroller.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/dataTables.responsive.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/responsive.bootstrap4.min.js"></script>
+<script type="text/javascript" src="../../js/vendor/cleave.min.js"></script>
+
+
+<script type="text/javascript" src="../../js/vendor/jquery-ui.min.js"></script>
+
+<!--DO NOT REMOVE-->
+<script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"Modules-M23-Modal-Invoice","lineagePath":"../../patterns/03-Modules-M23-Modal-Invoice/03-Modules-M23-Modal-Invoice.rendered.html"}],"lineageR":[{"lineagePattern":"Modules-M23-Modal-Invoice","lineagePath":"../../patterns/03-Modules-M23-Modal-Invoice/03-Modules-M23-Modal-Invoice.rendered.html"}],"patternLineageEExists":true,"patternDesc":"<p>Primary profile data for a customer.</p>\n","patternBreadcrumb":{"patternType":"Components"},"patternExtension":"mustache","patternName":"C35-Invoice-Line-Items","patternPartial":"Components-C35-Invoice-Line-Items","patternState":"","patternEngineName":"mustache","extraOutput":{}}
+</script>
+
+<script>
+  window.patternData = {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"Modules-M23-Modal-Invoice","lineagePath":"../../patterns/03-Modules-M23-Modal-Invoice/03-Modules-M23-Modal-Invoice.rendered.html"}],"lineageR":[{"lineagePattern":"Modules-M23-Modal-Invoice","lineagePath":"../../patterns/03-Modules-M23-Modal-Invoice/03-Modules-M23-Modal-Invoice.rendered.html"}],"patternLineageEExists":true,"patternDesc":"<p>Primary profile data for a customer.</p>\n","patternBreadcrumb":{"patternType":"Components"},"patternExtension":"mustache","patternName":"C35-Invoice-Line-Items","patternPartial":"Components-C35-Invoice-Line-Items","patternState":"","patternEngineName":"mustache","extraOutput":{}};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1694441068534">
+  (function() {
+    if (self != top) {
+      var cb = '1694441068534';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+<script id="pl-js-insert-1694441068534">
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+
+</body>
+
+</html>

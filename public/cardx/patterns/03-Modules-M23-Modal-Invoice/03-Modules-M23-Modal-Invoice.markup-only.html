@@ -1,0 +1,487 @@
+<button type="button" class="btn mx-4 mt-4" data-toggle="modal" data-target="#customerCreateInvoice"
+  data-backdrop="false">Create Invoice</button>
+
+<div class="modal fade modal-full" id="customerCreateInvoice" tabindex="-1" role="dialog" aria-labelledby="Create New Invoice"
+  aria-hidden="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <!-- Mini-Header -->
+      <div class="container-fluid mini-header heading-row bg-primary-2">
+        <div class="container">
+          <div class="row h-100 py-5">
+            <div class="col-lg-11 col-xl-9 mx-auto heading-col d-flex flex-column flex-md-row align-items-center px-0">
+              <h1 class="primary-3">Create New Invoice</h1>
+              <div class="ml-auto nav nav-pills" role="tablist">
+                <button type="button" class="ml-4 btn btn-secondary btn-dark cancel" data-dismiss="modal" href=""
+                  role="" aria-controls=""
+                  aria-selected="">Cancel</button>
+                <button type="button" class="ml-4 btn btn-secondary btn-dark invoice-save-draft" data-dismiss="" href=""
+                  role="" aria-controls=""
+                  aria-selected="">Save Draft</button>
+                <button type="button" class="ml-4 btn btn-secondary btn-dark pills-edit-tab" data-dismiss="" href="#pills-edit"
+                  role="tab" aria-controls="pills-edit"
+                  aria-selected="true">Edit</button>
+                <button type="button" class="ml-4 btn btn-dark pills-preview-tab" data-dismiss="" href="#pills-preview"
+                  role="tab" aria-controls="pills-preview"
+                  aria-selected="false">Preview</button>
+                <button type="button" class="ml-4 btn btn-dark invoice-send" data-dismiss="modal" href=""
+                  role="" aria-controls=""
+                  aria-selected="">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-header py-0 px-md-0">
+        <!-- Mobile Header -->
+        <div class="container h-100 d-md-none pl-0">
+          <div class="row h-100">
+            <div class="col-12 px-0 d-flex align-items-center">
+              <h1 class="primary-3 display4">Create New Invoice</h1>
+              <div class="ellipse-button">
+                <div>
+                  <a href="javascript:void(0);"
+                    class="mobile-ellipse-trigger display2 primary-3 d-flex align-items-center" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"><span class="d-inline-block caret ml-2">&nbsp;</span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <a href="" class="dropdown-item" data-dismiss="modal"
+                      aria-label="cancel">Cancel</a>
+                    <a href="" class="dropdown-item" data-dismiss=""
+                      aria-label="Save Draft">Save Draft</a>
+                    <a href="" class="dropdown-item pills-edit-tab" data-dismiss=""
+                      aria-label="Edit ">Edit</a>
+                    <a href="" class="dropdown-item pills-preview-tab" data-dismiss=""
+                      aria-label="Preview ">Preview</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Header image fade with object-fit -->
+        <img class="d-none d-md-block header-img h-100 w-100" src="../../images/modal-header.svg" />
+        <!-- Desktop Header -->
+        <div class="container d-none d-md-block h-100 heading-row">
+          <div class="row h-100">
+            <div class="col-lg-11 col-xl-9 mx-auto heading-col d-flex flex-column flex-md-row align-items-center px-0">
+              <h1 class="primary-3 invoice-page-heading">Create New Invoice</h1>
+              <div class="ml-auto nav nav-pills" role="tablist">
+                <button type="button" class="ml-4 btn btn-secondary btn-dark cancel" data-dismiss="modal" href=""
+                  role="" aria-controls=""
+                  aria-selected="">Cancel</button>
+                <button type="button" class="ml-4 btn btn-secondary btn-dark invoice-save-draft" data-dismiss="" href=""
+                  role="" aria-controls=""
+                  aria-selected="">Save Draft</button>
+                <button type="button" class="ml-4 btn btn-secondary btn-dark pills-edit-tab" data-dismiss="" href="#pills-edit"
+                  role="tab" aria-controls="pills-edit"
+                  aria-selected="true">Edit</button>
+                <button type="button" class="ml-4 btn btn-dark pills-preview-tab" data-dismiss="" href="#pills-preview"
+                  role="tab" aria-controls="pills-preview"
+                  aria-selected="false">Preview</button>
+                <button type="button" class="ml-4 btn btn-dark invoice-send" data-dismiss="modal" href=""
+                  role="" aria-controls=""
+                  aria-selected="">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body pt-0 px-0 h-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-11 col-xl-9 mx-auto pb-8 mainBox">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-edit" role="tab-panel"
+                  aria-labelledby="pills-edit-tab">
+                  <form class="w-100 needs-validation" novalidate>
+
+                    <div class="row py-6 py-md-8">
+  <div class="col-md-4 offset-md-1 pb-4">
+    <h2 class="secondary-6">Customer Information</h2>
+  </div>
+  <div class="col-md-5">
+    <div class="form-row">
+      <div class="form-group col-md-12 mb-3">
+        <label for="validationCustom01" class="primary-2">Name</label>
+        <input type="text" class="form-control" id="validationCustom01" aria-describedby="validationCustom01"
+          placeholder="Search customers or input new cardholder" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-9 mb-3">
+        <label for="validationCustom02" class="primary-2">Company</label>
+        <input type="text" class="form-control" id="validationCustom02" aria-describedby="validationCustom02" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="form-group col-md-12 mb-3">
+        <label for="InputEmail1" class="primary-2">Email</label>
+        <input type="email" class="form-control w-100" id="InputEmail1" aria-describedby="InputEmail1">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="form-group col-md-6 mb-3">
+        <label for="InputPhone1" class="primary-2">Phone number</label>
+        <input type="tel" class="form-control w-100" id="InputPhone1" aria-describedby="InputPhone1">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="form-group col-md-12 mb-3">
+        <label for="Additional1" class="primary-2">Additional Recipients</label>
+        <input type="text" class="form-control w-100" id="Additional1" aria-describedby="Additional1">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <p class="small mt-1" for="customCheck1">Use commas to separate multiple email addresses.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- I Rule -->
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div class="w-100 rule">&nbsp;</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+                    <div class="row py-6 py-md-8">
+  <div class="col-md-4 offset-md-1 pb-4">
+    <h2 class="secondary-6">Invoice Details</h2>
+  </div>
+  <div class="col-md-6 col-lg-5">
+    <div class="form-row px-0">
+      <div class="form-group col-md-8 mb-3">
+        <label for="validationCustom02" class="primary-2">Invoice Title</label>
+        <input type="text" class="form-control" id="validationCustom02" aria-describedby="validationCustom02" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-row px-0">
+      <div class="form-group col-md-6 mb-3">
+        <label for="validationCustom02" class="primary-2">Invoice ID</label>
+        <input type="text" class="form-control" id="validationCustom02" aria-describedby="validationCustom02" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-5 mb-3">
+        <label for="validationCustom05" class="primary-2">Frequency</label>
+        <select id="inputState" class="custom-select">
+          <option selected>Select...</option>
+          <option>Weekly</option>
+          <option>Semi-monthly</option>
+          <option>Monthly</option>
+          <option>Annually</option>
+        </select>
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+      <div class="form-group col-md-7 mb-3">
+        <label for="example-date-input" class="primary-2">Due</label>
+        <div class="input-group">
+          <input class="form-control custom-date date" type="text" name="date" value="Mar 28, 2019">
+          <div class="invalid-feedback">
+            Please select a valid date.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label class="primary-2" for="comment">Message</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- I Rule -->
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div class="w-100 rule">&nbsp;</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+                    <div class="row pt-6 pt-md-8">
+  <div class="col-md-10 offset-md-1 pb-4">
+    <h2 class="secondary-6 mb-6 mb-md-8">Line Items</h2>
+
+    <table id="invoice-edit-table" class="mb-0 display nowrap">
+      <thead class="bg-secondary-1 primary-3 label uppercase">
+        <tr>
+          <th><span class="pl-3">Seq.</span></th>
+          <th><span class="pl-1">Item Name</span></th>
+          <th><span class="pl-3">Quantity</span></th>
+          <th><span class="pl-3">Price</span></th>
+          <th><span class="pl-3">Total</span></th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+    </table>
+    <a href="#" class="small bold d-inline-block mt-3 add-additional"><span class="add-additional-icon"></span> Add
+      additional line</a>
+  </div>
+</div>
+
+<div class="row pb-6">
+  <div class="col-md-6 offset-md-1 pb-4">
+    &nbsp;
+  </div>
+  <div class="col-md-4">
+    <div class="row mx-0 px-0">
+      <div class="w-100 rule thin-gray">&nbsp;</div>
+      <div class="col-4 col-md-5 d-flex align-items-center">
+        <p class="label my-3">Discount</p>
+      </div>
+      <div class="col-6 d-flex align-items-center">
+        <p class="gray my-3">XX%</p>
+      </div>
+      <div class="w-100 rule thin-gray">&nbsp;</div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-4 col-md-5 d-flex align-items-center">
+        <p class="label my-3">Subtotal</p>
+      </div>
+      <div class="col-6 d-flex align-items-center">
+        <p class="gray my-3">$00.00</p>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-4 col-md-5 d-flex align-items-center">
+        <p class="label my-3">Tax</p>
+      </div>
+      <div class="col-6 d-flex align-items-center">
+        <p class="gray my-3">$00.00</p>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-4 col-md-5 d-flex align-items-center">
+        <p class="label my-3">Total</p>
+      </div>
+      <div class="col-6 d-flex align-items-center">
+        <p class="gray my-3">$00.00</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- I Rule -->
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div class="w-100 rule">&nbsp;</div>
+  </div>
+</div>
+
+
+
+                  </form>
+                </div>
+                <div class="tab-pane fade " id="pills-preview" role="tab-panel"
+                  aria-labelledby="pills-preview-tab">
+                  <form class="w-100 needs-validation" novalidate>
+
+
+
+
+                    <div class="row pt-6 pt-md-8 d-flex align-items-start">
+  <div class="col-md-3 offset-md-1 pb-4 pl-md-0">
+    <img src="../../images/invoice-logo.png" alt="Customer Logo" class="preview-logo">
+  </div>
+  <div class="col-md-7 pb-4">
+    <div class="invoice-heading w-100 text-md-right pt-3 py-md-0">
+      <h1 class="secondary-6">{ Invoice Title }</h1>
+    </div>
+    <div class="d-flex flex-column flex-md-row mt-5">
+      <div class="flex-fill text-md-right">
+        <p class="label mb-0 gray">Invoice #</p>
+        <p>1875</p>
+      </div>
+      <div class="flex-fill text-md-right">
+        <p class="label mb-0 gray">Invoice Date</p>
+        <p>Dec 20, 2018</p>
+      </div>
+      <div class="flex-fill text-md-right">
+        <p class="label mb-0 gray">Invoice Due Date</p>
+        <p class="mb-0">Jan 20, 2019</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row pt-md-8 d-flex align-items-start">
+  <div class="col-md-3 offset-md-1 pb-4 pl-md-0">
+    <p class="mb-0">Dwight Schrute</p>
+    <p class="mb-0">dschrute@dundermifflin.com</p>
+    <p class="mb-0">(123) 123-1234</p>
+  </div>
+  <div class="col-md-4 offset-md-3 pb-4 mt-3 mt-md-0">
+    <div class="bg-gray-light text-right p-3 left-border">
+      <label class="mb-0 ml-5 ml-md-7 primary-2">Amount Due</label>
+      <p class="display2 mb-0 light">$2,049.79</p>
+    </div>
+  </div>
+</div>
+
+<div class="row pt-5">
+  <div class="col-md-10 offset-md-1 pb-5 pl-md-0">
+    <div class="w-100 rule thin-gray">&nbsp;</div>
+  </div>
+</div>
+
+<div class="row pt-3">
+  <div class="col-md-3 offset-md-1 pb-4 pl-md-0">
+    <p class="label primary-2 mb-1">Bill To</p>
+    <p class="mb-0">Leslie Knope</p>
+    <p class="mb-0">lknope@indianaparkrec.com</p>
+  </div>
+</div>
+
+<div class="row pt-3">
+  <div class="col-md-10 offset-md-1 pb-4 pl-md-0">
+    <table id="invoice-preview-table" class="mb-0 display nowrap">
+      <thead class="bg-secondary-1 primary-3 label uppercase">
+        <tr>
+          <th>Item Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row pb-6">
+  <div class="col-md-6 offset-md-1">
+    &nbsp;
+  </div>
+  <div class="col-md-4">
+    <div class="row mx-0 px-0">
+      <div class="w-100 rule thin-gray">&nbsp;</div>
+      <div class="col-5 d-flex align-items-center">
+        <p class="label my-3">Discount</p>
+      </div>
+      <div class="col-5 d-flex align-items-center justify-content-end">
+        <p class="my-3">XX%</p>
+      </div>
+      <div class="w-100 rule thin-gray">&nbsp;</div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-5 d-flex align-items-center">
+        <p class="label my-3">Subtotal</p>
+      </div>
+      <div class="col-5 d-flex align-items-center justify-content-end">
+        <p class="my-3">$1999.98</p>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-5 d-flex align-items-center">
+        <p class="label my-3">Taxable Subtotal</p>
+      </div>
+      <div class="col-5 d-flex align-items-center justify-content-end">
+        <p class="my-3">$1999.98</p>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-5 d-flex align-items-center">
+        <p class="label my-3">Tax</p>
+      </div>
+      <div class="col-5 d-flex align-items-center justify-content-end">
+        <p class="my-3">$49.75</p>
+      </div>
+    </div>
+    <div class="row mx-0 px-0">
+      <div class="col-5 d-flex align-items-center">
+        <p class="label my-3">Total</p>
+      </div>
+      <div class="col-5 d-flex align-items-center justify-content-end">
+        <p class="my-3 bold">$2049.45</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- I Rule -->
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div class="w-100 rule thin-gray">&nbsp;</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <p class="label mt-6 mb-1">A note to our customers</p>
+    <p class="small mb-0 gray-medium">• To cover the cost of credit card acceptance, we pass on a 3.5% credit card fee.
+    </p>
+    <p class="small mb-0 gray-medium">• This fee is not more than the cost of accepting these cards. There is no fee for
+      debit cards.</p>
+  </div>
+</div>
+
+<!-- I Rule -->
+<div class="row pt-6">
+  <div class="col-md-10 offset-md-1">
+    <div class="w-100 rule">&nbsp;</div>
+  </div>
+</div>
+
+
+                  </form>
+                </div>
+                <div class="row mt-8">
+                  <div class="col-md-10 offset-md-1 d-flex">
+                    <div class="ml-md-auto nav nav-pills btns-bottom d-flex flex-column-reverse d-sm-block"
+                      role="tablist">
+                      <button type="button" class="mt-3 ml-0 mr-3 mr-md-0 ml-md-3 btn btn-secondary cancel"
+                        data-dismiss="modal" href="" role=""
+                        aria-controls="" aria-selected="">Cancel</button>
+                      <button type="button" class="mt-3 ml-0 mr-3 mr-md-0 ml-md-3 btn btn-secondary invoice-save-draft"
+                        data-dismiss="" href="" role=""
+                        aria-controls="" aria-selected="">Save Draft</button>
+                      <button type="button" class="mt-3 ml-0 mr-3 mr-md-0 ml-md-3 btn btn-secondary pills-edit-tab"
+                        data-dismiss="" href="#pills-edit" role="tab"
+                        aria-controls="pills-edit" aria-selected="true">Edit</button>
+                      <button type="button" class="mt-3 ml-0 mr-3 mr-md-0 ml-md-3 btn pills-preview-tab"
+                        data-dismiss="" href="#pills-preview" role="tab"
+                        aria-controls="pills-preview" aria-selected="false">Preview</button>
+                      <button type="button" class="mt-3 ml-0 mr-3 mr-md-0 ml-md-3 btn invoice-send"
+                        data-dismiss="modal" href="" role=""
+                        aria-controls="" aria-selected="">Send</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

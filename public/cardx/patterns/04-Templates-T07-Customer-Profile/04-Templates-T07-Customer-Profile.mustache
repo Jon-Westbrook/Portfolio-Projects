@@ -1,0 +1,30 @@
+<!-- Modals -->
+{{# home.newSaleModal }}
+{{> Modules-M22-Modal-Sale }}
+{{/ home.newSaleModal }}
+
+{{# customer.modals }}
+{{> Modules-M24-Modals-Customer }}
+{{/ customer.modals }}
+
+{{# home.invoiceModal }}
+{{> Modules-M23-Modal-Invoice }}
+{{/ home.invoiceModal }}
+
+<div class="wrapper">
+
+  {{> Modules-M02-Navigation-Side }}
+
+  <!-- Page Content  -->
+  <section id="content" class="pb-8">
+
+    {{> Modules-M33-Navigation-Top }}
+    {{> Modules-M03b-Header-Breadcrumbs }}
+    {{> Modules-M12-Customer-Profile }}
+
+  </section>
+
+  <!-- Dark Overlay  -->
+  <div class="overlay"></div>
+
+</div>

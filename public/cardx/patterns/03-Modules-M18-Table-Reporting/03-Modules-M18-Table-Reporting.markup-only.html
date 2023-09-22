@@ -1,0 +1,373 @@
+<div class="container reporting">
+
+  <div class="row mt-7">
+    <div class="col-md-12 px-0">
+      <div class="nav nav-tabs" role="tablist">
+        <a class="h4 pb-4 bold uppercase secondary-4 active" id="sales-tab" data-toggle="tab"
+          href="#sales-pane" role="tab" aria-controls="sales-pane"
+          aria-selected="true">Sales</a>
+        <a class="h4 pb-4 bold uppercase secondary-4 " id="deposits-tab" data-toggle="tab"
+          href="#deposits-pane" role="tab" aria-controls="pills-edit"
+          aria-selected="false">Deposits</a>
+        <span class="flex-grow-1 d-none d-sm-inline-block" style="border-bottom: 6px solid #E6E6ED"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="nav-tabContent">
+
+    <div class="tab-pane fade show active" id="sales-pane" role="tab-panel" aria-labelledby="sales-tab">
+      <div class="d-flex flex-column">
+
+        <div class="row mt-7 order-2 order-lg-1 pl-0 reporting-filters">
+
+  <div class="col-9 col-lg-5 pl-0">
+
+    <div class="form-row mx-0">
+      <div class="input-group">
+        <div class="input-group-prepend d-none d-lg-block">
+          <select id="table-filter-select" class="custom-select table-filter-select">
+            <option class="dropdown-item" href="#">All</option>
+            <option class="dropdown-item" href="#">Amount</option>
+            <option class="dropdown-item" href="#">Card Number</option>
+            <option class="dropdown-item" href="#">Customer Name</option>
+            <option class="dropdown-item" href="#">Email</option>
+            <option class="dropdown-item" href="#">Invoice</option>
+            <option class="dropdown-item" href="#">Payment Method</option>
+            <option class="dropdown-item" href="#">Card Type</option>
+            <option class="dropdown-item" href="#">Status</option>
+          </select>
+        </div>
+        <input type="search" class="form-control search-input" placeholder="Search customers, amount..."
+          aria-label="Search">
+        <div class="input-group-append magnifier-button">
+          <span class="input-group-text" id="basic-addon2">
+            <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>icon</title>
+              <defs>
+                <path
+                  d="M366.878784,24.4182454 L362.408512,19.9893325 C363.309238,18.7239288 363.776282,17.1255242 363.54276,15.4272193 C363.142437,12.5634109 360.80722,10.2990043 357.904878,10.0326036 C353.96837,9.63300241 350.632345,12.9630121 351.032668,16.9257236 C351.29955,19.7895319 353.568047,22.1538388 356.437028,22.55344 C358.1384,22.7865407 359.739692,22.3203393 361.007381,21.4212367 L365.444294,25.8501496 C365.644455,26.0499501 365.944698,26.0499501 366.144859,25.8501496 L366.845424,25.1508475 C367.045586,24.9510469 367.045586,24.618046 366.878784,24.4182454 L366.878784,24.4182454 Z M353,16.5 C353,14.0232558 355.023256,12 357.5,12 C359.976744,12 362,14.0232558 362,16.5 C362,18.9767442 359.976744,21 357.5,21 C355.023256,21 353,19.0116279 353,16.5 L353,16.5 Z"
+                  id="path-1"></path>
+              </defs>
+              <g id="Layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="5_T8_Article@2x" transform="translate(-564.000000, -132.000000)">
+                  <g id="Search" transform="translate(213.000000, 122.000000)">
+                    <mask id="mask-2" fill="white">
+                      <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="icon" fill="#919193" xlink:href="#path-1"></use>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-3 px-lg-0 d-lg-none px-0">
+    <button class="btn btn-filter dates-toggle w-100 ">Filter</button>
+  </div>
+
+
+  <div class="col-12 col-lg-7 col-xl-6 offset-xl-1 d-lg-flex px-0 pl-lg-4 mt-4 mt-lg-0 date-filters justify-content-center align-items-center">
+    <div class="form-row flex-fill mx-0">
+      <div class="form-group from-date mb-0">
+        <div class="input-group bg-primary-3">
+          <input class="form-control custom-date date bg-primary-3" type="text" name="date" value="Mar 28, 2019">
+          <div class="invalid-feedback">
+            Please select a valid date.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img src="../../images/icons/general-arrow.svg" alt="arrow right" class="right-arrow">
+
+    <div class="form-row flex-fill mx-0">
+      <div class="form-group to-date mb-0">
+        <div class="input-group">
+          <input class="form-control custom-date date bg-primary-3" type="text" name="date" value="Mar 28, 2019">
+          <div class="invalid-feedback">
+            Please select a valid date.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-none d-lg-block">
+      <a href="javascript:;" class="display7 export-link">
+        <svg width="10px" height="11px" viewBox="0 0 10 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink
+          <title>export_icn</title>
+          <defs>
+            <polygon id=" path-1" points="0.0003 0.615 9.006 0.615 9.006 5 0.0003 5"></polygon>
+          </defs>
+          <g id="Layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="T3a_Tables_Reporting_Transactions@2x" transform="translate(-1280.000000, -207.000000)">
+              <g id="FILTER-BAR" transform="translate(218.000000, 195.000000)">
+                <g id="Export" transform="translate(1020.000000, 8.000000)">
+                  <g id="export_icn" transform="translate(42.000000, 4.000000)">
+                    <path
+                      d="M3.9731,0.2199 L1.9611,2.2319 C1.6681,2.5249 1.6681,2.9989 1.9611,3.2919 C2.2541,3.5849 2.7291,3.5849 3.0221,3.2919 L3.7531,2.5609 L3.7541,7.4089 C3.7541,7.8239 4.0891,8.1589 4.5041,8.1589 C4.7111,8.1589 4.8981,8.0749 5.0341,7.9399 C5.1701,7.8039 5.2531,7.6159 5.2531,7.4089 L5.2531,2.5609 L5.9851,3.2919 C6.2781,3.5849 6.7531,3.5849 7.0451,3.2919 C7.3381,2.9989 7.3381,2.5249 7.0451,2.2319 L5.0341,0.2199 C4.7411,-0.0731 4.2651,-0.0731 3.9731,0.2199"
+                      id="Fill-1" fill="#0071CE"></path>
+                    <g id="Group-5" transform="translate(0.000000, 5.711100)">
+                      <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                      </mask>
+                      <g id="Clip-4"></g>
+                      <path
+                        d="M8.2563,5 L0.7503,5 C0.3363,5 0.0003,4.664 0.0003,4.25 L0.0003,1.365 C0.0003,0.951 0.3363,0.615 0.7503,0.615 C1.1643,0.615 1.5003,0.951 1.5003,1.365 L1.5003,3.5 L7.5063,3.5 L7.5063,1.365 C7.5063,0.951 7.8423,0.615 8.2563,0.615 C8.6703,0.615 9.0063,0.951 9.0063,1.365 L9.0063,4.25 C9.0063,4.664 8.6703,5 8.2563,5"
+                        id="Fill-3" fill="#0071CE"></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>&nbsp;Export</a>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+        <div class="row mt-7 order-1 order-lg-2 bg-primary-3 px-0 reporting-summary">
+
+  <!-- Mobile -->
+  <div class="col-12 col-sm-8 pl-5 bg-primary-3 d-lg-none">
+    <p class="label uppercase secondary-1 mt-3 mb-0">Total Revenue</p>
+    <p class="display3 secondary-6 light mt-0 mt-sm-1 mb-0">$111,112,345.67</p>
+  </div>
+  <div class="col-12 col-sm-4 px-lg-0 bg-primary-3 d-lg-none pl-5">
+    <p class="label uppercase secondary-1 mt-2 mt-sm-3 mb-0">Sales</p>
+    <p class="display3 secondary-6 light mt-0 mt-sm-1 mb-0">987</p>
+  </div>
+  <div class="col-12 d-lg-none pl-5">
+    <p class="display7 small mt-2 mt-sm-3 mb-3">Totals for Dec 28, 2018 - Jan 28, 2018</p>
+  </div>
+
+  <!-- Desktop -->
+  <div class="col-lg-6 bg-primary-3 d-none d-lg-flex align-items-center">
+    <p class="label uppercase secondary-1 my-2 d-inline-block text-align-right pr-4">Total Revenue</p>
+    <p class="display3 secondary-6 light my-2 d-inline-block">$111,112,345.67</p>
+  </div>
+  <div class="col-lg-3 bg-primary-3 d-none d-lg-flex align-items-center">
+    <p class="label uppercase secondary-1 mt-3 my-2 text-align-right pr-4">Sales</p>
+    <p class="display3 secondary-6 light my-2">987</p>
+  </div>
+  <div class="col-lg-3 bg-primary-3 d-none d-lg-flex align-items-center px-0">
+    <p class="display7 small my-2">Totals for the time period shown</p>
+  </div>
+</div>
+
+
+
+
+
+        <div class="row mt-4 order-3">
+  <div class="col-md-12 px-0">
+    <table id="sales-table" class="display nowrap" style="width:100%">
+      <thead class="bg-secondary-1 primary-3 label uppercase">
+        <tr>
+          <th>ID</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Recipient</th>
+          <th>Payment Method</th>
+          <th>Card Type</th>
+          <th>Status</th>
+          <th></th>
+          <th class="control"></th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
+
+
+
+      </div>
+    </div>
+    <div class="tab-pane fade " id="deposits-pane" role="tab-panel" aria-labelledby="deposits-tab">
+      <div class="d-flex flex-column">
+
+        <div class="row mt-7 order-2 order-lg-1 pl-0 reporting-filters">
+
+  <div class="col-9 col-lg-5 pl-0">
+
+    <div class="form-row mx-0">
+      <div class="input-group">
+        <div class="input-group-prepend d-none d-lg-block">
+          <select id="table-filter-select" class="custom-select table-filter-select">
+            <option class="dropdown-item" href="#">All</option>
+            <option class="dropdown-item" href="#">Amount</option>
+            <option class="dropdown-item" href="#">Card Number</option>
+            <option class="dropdown-item" href="#">Customer Name</option>
+            <option class="dropdown-item" href="#">Email</option>
+            <option class="dropdown-item" href="#">Invoice</option>
+            <option class="dropdown-item" href="#">Payment Method</option>
+            <option class="dropdown-item" href="#">Card Type</option>
+            <option class="dropdown-item" href="#">Status</option>
+          </select>
+        </div>
+        <input type="search" class="form-control search-input" placeholder="Search customers, amount..."
+          aria-label="Search">
+        <div class="input-group-append magnifier-button">
+          <span class="input-group-text" id="basic-addon2">
+            <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>icon</title>
+              <defs>
+                <path
+                  d="M366.878784,24.4182454 L362.408512,19.9893325 C363.309238,18.7239288 363.776282,17.1255242 363.54276,15.4272193 C363.142437,12.5634109 360.80722,10.2990043 357.904878,10.0326036 C353.96837,9.63300241 350.632345,12.9630121 351.032668,16.9257236 C351.29955,19.7895319 353.568047,22.1538388 356.437028,22.55344 C358.1384,22.7865407 359.739692,22.3203393 361.007381,21.4212367 L365.444294,25.8501496 C365.644455,26.0499501 365.944698,26.0499501 366.144859,25.8501496 L366.845424,25.1508475 C367.045586,24.9510469 367.045586,24.618046 366.878784,24.4182454 L366.878784,24.4182454 Z M353,16.5 C353,14.0232558 355.023256,12 357.5,12 C359.976744,12 362,14.0232558 362,16.5 C362,18.9767442 359.976744,21 357.5,21 C355.023256,21 353,19.0116279 353,16.5 L353,16.5 Z"
+                  id="path-1"></path>
+              </defs>
+              <g id="Layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="5_T8_Article@2x" transform="translate(-564.000000, -132.000000)">
+                  <g id="Search" transform="translate(213.000000, 122.000000)">
+                    <mask id="mask-2" fill="white">
+                      <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="icon" fill="#919193" xlink:href="#path-1"></use>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-3 px-lg-0 d-lg-none px-0">
+    <button class="btn btn-filter dates-toggle w-100 ">Filter</button>
+  </div>
+
+
+  <div class="col-12 col-lg-7 col-xl-6 offset-xl-1 d-lg-flex px-0 pl-lg-4 mt-4 mt-lg-0 date-filters justify-content-center align-items-center">
+    <div class="form-row flex-fill mx-0">
+      <div class="form-group from-date mb-0">
+        <div class="input-group bg-primary-3">
+          <input class="form-control custom-date date bg-primary-3" type="text" name="date" value="Mar 28, 2019">
+          <div class="invalid-feedback">
+            Please select a valid date.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img src="../../images/icons/general-arrow.svg" alt="arrow right" class="right-arrow">
+
+    <div class="form-row flex-fill mx-0">
+      <div class="form-group to-date mb-0">
+        <div class="input-group">
+          <input class="form-control custom-date date bg-primary-3" type="text" name="date" value="Mar 28, 2019">
+          <div class="invalid-feedback">
+            Please select a valid date.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-none d-lg-block">
+      <a href="javascript:;" class="display7 export-link">
+        <svg width="10px" height="11px" viewBox="0 0 10 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink
+          <title>export_icn</title>
+          <defs>
+            <polygon id=" path-1" points="0.0003 0.615 9.006 0.615 9.006 5 0.0003 5"></polygon>
+          </defs>
+          <g id="Layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="T3a_Tables_Reporting_Transactions@2x" transform="translate(-1280.000000, -207.000000)">
+              <g id="FILTER-BAR" transform="translate(218.000000, 195.000000)">
+                <g id="Export" transform="translate(1020.000000, 8.000000)">
+                  <g id="export_icn" transform="translate(42.000000, 4.000000)">
+                    <path
+                      d="M3.9731,0.2199 L1.9611,2.2319 C1.6681,2.5249 1.6681,2.9989 1.9611,3.2919 C2.2541,3.5849 2.7291,3.5849 3.0221,3.2919 L3.7531,2.5609 L3.7541,7.4089 C3.7541,7.8239 4.0891,8.1589 4.5041,8.1589 C4.7111,8.1589 4.8981,8.0749 5.0341,7.9399 C5.1701,7.8039 5.2531,7.6159 5.2531,7.4089 L5.2531,2.5609 L5.9851,3.2919 C6.2781,3.5849 6.7531,3.5849 7.0451,3.2919 C7.3381,2.9989 7.3381,2.5249 7.0451,2.2319 L5.0341,0.2199 C4.7411,-0.0731 4.2651,-0.0731 3.9731,0.2199"
+                      id="Fill-1" fill="#0071CE"></path>
+                    <g id="Group-5" transform="translate(0.000000, 5.711100)">
+                      <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                      </mask>
+                      <g id="Clip-4"></g>
+                      <path
+                        d="M8.2563,5 L0.7503,5 C0.3363,5 0.0003,4.664 0.0003,4.25 L0.0003,1.365 C0.0003,0.951 0.3363,0.615 0.7503,0.615 C1.1643,0.615 1.5003,0.951 1.5003,1.365 L1.5003,3.5 L7.5063,3.5 L7.5063,1.365 C7.5063,0.951 7.8423,0.615 8.2563,0.615 C8.6703,0.615 9.0063,0.951 9.0063,1.365 L9.0063,4.25 C9.0063,4.664 8.6703,5 8.2563,5"
+                        id="Fill-3" fill="#0071CE"></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>&nbsp;Export</a>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+        <div class="row mt-7 order-1 order-lg-2 bg-primary-3 px-0 reporting-summary">
+
+  <!-- Mobile -->
+  <div class="col-12 col-sm-8 pl-5 bg-primary-3 d-lg-none">
+    <p class="label uppercase secondary-1 mt-3 mb-0">Deposit Total</p>
+    <p class="display3 secondary-6 light mt-0 mt-sm-1 mb-0">$123,456.89</p>
+  </div>
+  <div class="col-12 col-sm-4 px-lg-0 bg-primary-3 d-lg-none pl-5">
+    <p class="label uppercase secondary-1 mt-2 mt-sm-3 mb-0">Deposits</p>
+    <p class="display3 secondary-6 light mt-0 mt-sm-1 mb-0">45</p>
+  </div>
+  <div class="col-12 d-lg-none pl-5">
+    <p class="display7 small mt-2 mt-sm-3 mb-3">Totals for Dec 28, 2018 - Jan 28, 2018</p>
+  </div>
+
+  <!-- Desktop -->
+  <div class="col-lg-6 bg-primary-3 d-none d-lg-flex align-items-center">
+    <p class="label uppercase secondary-1 my-2 d-inline-block text-align-right pr-4">Deposit Total</p>
+    <p class="display3 secondary-6 light my-2 d-inline-block">$123,456.89</p>
+  </div>
+  <div class="col-lg-3 bg-primary-3 d-none d-lg-flex align-items-center">
+    <p class="label uppercase secondary-1 mt-3 my-2 text-align-right pr-4">Deposits</p>
+    <p class="display3 secondary-6 light my-2">45</p>
+  </div>
+  <div class="col-lg-3 bg-primary-3 d-none d-lg-flex align-items-center px-0">
+    <p class="display7 small my-2">Totals for the time period shown</p>
+  </div>
+</div>
+
+
+
+
+
+
+        <div class="row mt-4 order-3">
+  <div class="col-md-12 px-0">
+    <table id="deposits-table" class="display nowrap" style="width:100%">
+      <thead class="bg-secondary-1 primary-3 label uppercase">
+        <tr>
+          <th>ID</th>
+          <th>Deposit</th>
+          <th>Date</th>
+          <th>Gross Amount</th>
+          <th># Transactions</th>
+          <th></th>
+          <th class="control"></th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>
