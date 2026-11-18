@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#fff">
+    <meta name="theme-color" content="#101010">
     <meta name="description" content="Selected digital work by Jonathon Westbrook.">
     <title>Jonathon Westbrook — Selected Work</title>
     <style>
       :root {
-        color-scheme: light;
-        --paper: #fff;
-        --ink: #111;
-        --muted: #777;
-        --line: #e6e6e6;
+        color-scheme: dark;
+        --paper: #101010;
+        --ink: #f5f5f5;
+        --muted: #b0b0b0;
+        --line: #353535;
         --cyan: #00e5ff;
         --pink: #ff2d8d;
         --green: #b7ff00;
@@ -20,12 +20,14 @@
       }
 
       * { box-sizing: border-box; }
-      html { min-width: 320px; background: var(--paper); }
+      html { min-width: 320px; background: var(--paper); font-size: 16px; }
       body {
         margin: 0;
         color: var(--ink);
         background: var(--paper);
         font-family: var(--sans);
+        font-size: 20px;
+        line-height: 1.45;
         -webkit-font-smoothing: antialiased;
       }
       button, a { font: inherit; }
@@ -36,32 +38,50 @@
 
       .page { width: min(1760px, calc(100% - 80px)); margin: 0 auto; }
       .masthead {
-        min-height: 76px;
+        min-height: 112px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 32px;
         border-bottom: 1px solid var(--line);
       }
+      .masthead-brand { display: flex; align-items: baseline; }
       .wordmark {
         color: var(--ink);
-        font-size: 15px;
+        font-size: clamp(28px, 3vw, 40px);
         font-weight: 650;
         letter-spacing: -.035em;
         text-decoration: none;
       }
-      .masthead-note {
-        color: var(--muted);
-        font-size: 10px;
-        letter-spacing: .12em;
-        text-transform: uppercase;
+      .masthead-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px 24px;
+      }
+      .masthead-links a {
+        color: var(--ink);
+        font-size: 16px;
+        text-decoration-color: var(--cyan);
+        text-underline-offset: 5px;
+        transition: color .2s ease, text-decoration-color .2s ease;
+      }
+      .masthead-links a:hover { color: var(--cyan); }
+
+      .work-heading {
+        margin: 0 0 36px;
+        font-size: clamp(42px, 5.5vw, 72px);
+        font-weight: 500;
+        letter-spacing: -.055em;
+        line-height: 1;
       }
 
-      .work { padding: 34px 0 72px; }
+      .work { padding: 50px 0 88px; }
       .project-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         column-gap: 22px;
-        row-gap: 38px;
+        row-gap: 56px;
       }
       .project-card {
         display: block;
@@ -79,7 +99,7 @@
         width: 100%;
         aspect-ratio: 16 / 9;
         overflow: hidden;
-        background: #eee;
+        background: #1b1b1b;
       }
       .project-image img {
         display: block;
@@ -99,32 +119,31 @@
         justify-content: space-between;
         gap: 14px;
         width: 100%;
-        padding-top: 11px;
+        padding-top: 14px;
       }
       .project-name {
-        font-size: 13px;
+        font-size: 20px;
         font-weight: 550;
         letter-spacing: -.015em;
       }
       .project-meta {
         color: var(--muted);
-        font-size: 9px;
-        letter-spacing: .09em;
+        font-size: 16px;
+        letter-spacing: .01em;
         text-align: right;
-        text-transform: uppercase;
         white-space: nowrap;
       }
       .project-card:hover .project-name { text-decoration: underline; text-decoration-color: var(--cyan); text-underline-offset: 4px; }
-      .project-card[data-project="polling"] .project-meta { color: #a51c5b; }
+      .project-card[data-project="polling"] .project-meta { color: #ff8abd; }
 
       .site-footer {
         display: flex;
         justify-content: space-between;
         gap: 20px;
-        padding: 17px 0 24px;
+        padding: 22px 0 28px;
         border-top: 1px solid var(--line);
         color: var(--muted);
-        font-size: 10px;
+        font-size: 16px;
       }
 
       .viewer {
@@ -143,6 +162,7 @@
       }
       .viewer[open] { display: flex; flex-direction: column; }
       .viewer::backdrop { background: #101010; }
+      .viewer[open] { animation: viewer-enter .24s ease-out both; }
       .viewer-header {
         display: flex;
         align-items: center;
@@ -151,7 +171,7 @@
       }
       .viewer-title {
         margin: 0;
-        font-size: 12px;
+        font-size: 20px;
         font-weight: 550;
         letter-spacing: .02em;
       }
@@ -169,7 +189,7 @@
         border-color: var(--cyan);
         color: var(--cyan);
       }
-      .viewer-close { width: 38px; height: 38px; border-radius: 50%; font-size: 20px; }
+      .viewer-close { width: 44px; height: 44px; border-radius: 50%; font-size: 26px; }
       .viewer-stage {
         position: relative;
         display: grid;
@@ -204,36 +224,41 @@
       .viewer-next { right: 0; }
       .viewer-info {
         display: grid;
-        grid-template-columns: 1fr auto;
-        align-items: end;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
         gap: 18px;
         width: min(100%, 1600px);
-        min-height: 78px;
+        min-height: 118px;
         margin: 0 auto;
-        padding: 14px 0 0;
+        padding: 20px 0 0;
         border-top: 1px solid #353535;
+        text-align: center;
+        animation: details-enter .35s .06s ease-out both;
       }
-      .viewer-caption { margin: 0; color: #d1d1d1; font-size: 12px; line-height: 1.5; }
-      .viewer-project { display: block; margin-bottom: 4px; color: #fff; font-size: 12px; font-weight: 600; }
-      .viewer-caption-note { display: block; margin-top: 4px; color: #8d8d8d; font-size: 10px; }
-      .viewer-actions { display: flex; align-items: center; gap: 22px; }
+      .viewer-caption { margin: 0; color: #dedede; font-size: 18px; line-height: 1.5; text-align: center; }
+      .viewer-project { display: block; margin-bottom: 6px; color: #fff; font-size: 24px; font-weight: 600; letter-spacing: -.025em; }
+      .viewer-caption-note { display: block; margin-top: 8px; color: #c0c0c0; font-size: 16px; }
+      .viewer-actions { display: flex; align-items: center; justify-content: center; gap: 22px; }
       .viewer-link {
         color: #fff;
-        font-size: 10px;
+        font-size: 18px;
+        font-weight: 550;
         text-decoration-color: var(--cyan);
-        text-underline-offset: 4px;
+        text-underline-offset: 5px;
+        transition: color .2s ease, text-underline-offset .2s ease;
       }
+      .viewer-link:hover { color: var(--cyan); text-underline-offset: 8px; }
       .viewer-link[hidden] { display: none; }
       .viewer-count {
         min-width: 46px;
         color: #aaa;
-        font-size: 10px;
+        font-size: 16px;
         font-variant-numeric: tabular-nums;
         text-align: right;
       }
 
       @media (min-width: 1500px) {
-        .project-grid { column-gap: 28px; row-gap: 46px; }
+        .project-grid { column-gap: 28px; row-gap: 64px; }
       }
       @media (max-width: 900px) {
         .page { width: calc(100% - 48px); }
@@ -241,36 +266,49 @@
       }
       @media (max-width: 560px) {
         .page { width: calc(100% - 32px); }
-        .masthead { min-height: 62px; }
-        .masthead-note { font-size: 8px; }
-        .work { padding-top: 22px; }
-        .project-grid { grid-template-columns: 1fr; row-gap: 25px; }
-        .project-caption { padding-top: 8px; }
-        .project-name { font-size: 12px; }
+        .masthead { min-height: 0; align-items: flex-start; flex-direction: column; gap: 16px; padding: 18px 0; }
+        .masthead-brand { width: 100%; align-items: baseline; }
+        .wordmark { font-size: clamp(25px, 7vw, 34px); }
+        .masthead-links { width: 100%; justify-content: flex-start; gap: 22px; }
+        .work { padding-top: 34px; }
+        .work-heading { margin-bottom: 28px; font-size: 48px; }
+        .project-grid { grid-template-columns: 1fr; row-gap: 42px; }
+        .project-caption { padding-top: 12px; }
+        .project-name { font-size: 20px; }
         .project-meta { max-width: 48%; white-space: normal; }
-        .viewer { padding: 12px 14px 18px; }
-        .viewer-stage { padding: 14px 0; }
-        .viewer-image { max-height: 72vh; }
-        .viewer-arrow { top: auto; bottom: 8px; transform: none; }
-        .viewer-previous { left: 0; }
-        .viewer-next { right: 0; }
-        .viewer-info { grid-template-columns: 1fr; gap: 10px; padding-top: 10px; }
-        .viewer-actions { justify-content: space-between; }
-        .site-footer { font-size: 9px; }
+        .viewer { justify-content: center; padding: 10px 0 18px; }
+        .viewer-header { position: absolute; top: 10px; right: 16px; left: 16px; padding: 0; }
+        .viewer-stage { flex: 0 0 auto; width: 100%; padding: 0; }
+        .viewer-image { width: 100vw; max-width: none; max-height: 62dvh; aspect-ratio: auto; object-fit: contain; }
+        .viewer-arrow { top: 50%; bottom: auto; transform: translateY(-50%); background: #101010cc; }
+        .viewer-previous { left: 12px; }
+        .viewer-next { right: 12px; }
+        .viewer-info { grid-template-columns: 1fr; gap: 18px; width: 100%; padding: 18px 20px 0; }
+        .viewer-caption { font-size: 18px; }
+        .viewer-actions { justify-content: center; flex-wrap: wrap; }
+        .site-footer { font-size: 16px; }
       }
+      @keyframes viewer-enter { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes details-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
       @media (prefers-reduced-motion: reduce) {
-        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+        *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
       }
     </style>
   </head>
   <body>
     <div class="page">
       <header class="masthead">
-        <a class="wordmark" href="/">Jonathon Westbrook</a>
-        <span class="masthead-note">Selected work</span>
+        <div class="masthead-brand">
+          <a class="wordmark" href="/">Jonathon Westbrook</a>
+        </div>
+        <nav class="masthead-links" aria-label="Professional links">
+          <a href="/resume/Jonathon_Westbrook_Resume_Design-Engineer-Final.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a>
+          <a href="https://www.linkedin.com/in/jonathonwestbrook" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </nav>
       </header>
 
       <main class="work">
+        <h1 class="work-heading">Selected Work</h1>
         <section class="project-grid" aria-label="Selected projects">
           <button class="project-card" type="button" data-project="autobot" aria-haspopup="dialog" aria-label="View AUTOBOT project images">
             <span class="project-image"><img src="/assets/work/autobot-research.jpg" alt="AUTOBOT research dashboard with strategy comparison chart" width="1920" height="1080" fetchpriority="high"></span>
@@ -450,7 +488,18 @@
           if (returnFocus) returnFocus.focus();
         });
         dialog.addEventListener("keydown", (event) => {
-          if (event.key === "ArrowLeft") {
+          if (event.key === "Tab") {
+            const focusable = [...dialog.querySelectorAll("button:not(:disabled), a[href]:not([hidden])")];
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (event.shiftKey && (document.activeElement === first || !dialog.contains(document.activeElement))) {
+              event.preventDefault();
+              last.focus();
+            } else if (!event.shiftKey && (document.activeElement === last || !dialog.contains(document.activeElement))) {
+              event.preventDefault();
+              first.focus();
+            }
+          } else if (event.key === "ArrowLeft") {
             event.preventDefault();
             step(-1);
           } else if (event.key === "ArrowRight") {
