@@ -21,6 +21,17 @@
 
       * { box-sizing: border-box; }
       html { min-width: 320px; background: var(--paper); font-size: 16px; }
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
       body {
         margin: 0;
         color: var(--ink);
@@ -304,6 +315,7 @@
       </header>
 
       <main class="work">
+        <h1 class="visually-hidden">Portfolio of Jonathon Westbrook</h1>
         <section class="project-grid" aria-label="Selected projects">
           <button class="project-card" type="button" data-project="autobot" aria-haspopup="dialog" aria-label="View AUTOBOT project images">
             <span class="project-image"><img src="/assets/work/autobot-research.jpg" alt="AUTOBOT research dashboard with strategy comparison chart" width="1920" height="1080" fetchpriority="high"></span>
