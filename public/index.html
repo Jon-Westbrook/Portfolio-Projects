@@ -45,13 +45,18 @@
         gap: 32px;
         border-bottom: 1px solid var(--line);
       }
-      .masthead-brand { display: flex; align-items: baseline; }
+      .masthead-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
       .wordmark {
         color: var(--ink);
-        font-size: clamp(28px, 3vw, 40px);
+        font-size: 32px;
         font-weight: 650;
         letter-spacing: -.035em;
         text-decoration: none;
+      }
+      .masthead-note {
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.25;
       }
       .masthead-links {
         display: flex;
@@ -67,14 +72,6 @@
         transition: color .2s ease, text-decoration-color .2s ease;
       }
       .masthead-links a:hover { color: var(--cyan); }
-
-      .work-heading {
-        margin: 0 0 36px;
-        font-size: clamp(42px, 5.5vw, 72px);
-        font-weight: 500;
-        letter-spacing: -.055em;
-        line-height: 1;
-      }
 
       .work { padding: 50px 0 88px; }
       .project-grid {
@@ -134,11 +131,9 @@
         white-space: nowrap;
       }
       .project-card:hover .project-name { text-decoration: underline; text-decoration-color: var(--cyan); text-underline-offset: 4px; }
-      .project-card[data-project="polling"] .project-meta { color: #ff8abd; }
-
       .site-footer {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         gap: 20px;
         padding: 22px 0 28px;
         border-top: 1px solid var(--line);
@@ -267,11 +262,10 @@
       @media (max-width: 560px) {
         .page { width: calc(100% - 32px); }
         .masthead { min-height: 0; align-items: flex-start; flex-direction: column; gap: 16px; padding: 18px 0; }
-        .masthead-brand { width: 100%; align-items: baseline; }
-        .wordmark { font-size: clamp(25px, 7vw, 34px); }
+        .masthead-brand { width: 100%; align-items: flex-start; }
+        .wordmark { font-size: 28px; }
         .masthead-links { width: 100%; justify-content: flex-start; gap: 22px; }
         .work { padding-top: 34px; }
-        .work-heading { margin-bottom: 28px; font-size: 48px; }
         .project-grid { grid-template-columns: 1fr; row-gap: 42px; }
         .project-caption { padding-top: 12px; }
         .project-name { font-size: 20px; }
@@ -300,23 +294,24 @@
       <header class="masthead">
         <div class="masthead-brand">
           <a class="wordmark" href="/">Jonathon Westbrook</a>
+          <span class="masthead-note">Selected Work</span>
         </div>
         <nav class="masthead-links" aria-label="Professional links">
           <a href="/resume/Jonathon_Westbrook_Resume_Design-Engineer-Final.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a>
           <a href="https://www.linkedin.com/in/jonathonwestbrook" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://github.com/Jon-Westbrook" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         </nav>
       </header>
 
       <main class="work">
-        <h1 class="work-heading">Selected Work</h1>
         <section class="project-grid" aria-label="Selected projects">
           <button class="project-card" type="button" data-project="autobot" aria-haspopup="dialog" aria-label="View AUTOBOT project images">
             <span class="project-image"><img src="/assets/work/autobot-research.jpg" alt="AUTOBOT research dashboard with strategy comparison chart" width="1920" height="1080" fetchpriority="high"></span>
-            <span class="project-caption"><span class="project-name">AUTOBOT</span><span class="project-meta">Research systems</span></span>
+            <span class="project-caption"><span class="project-name">AUTOBOT</span><span class="project-meta">AI Autoresearch</span></span>
           </button>
           <button class="project-card" type="button" data-project="persona" aria-haspopup="dialog" aria-label="View Persona Builder project images">
             <span class="project-image"><img src="/assets/work/persona-home.jpg" alt="AI Persona Builder interface and agent conversation" width="1920" height="1080"></span>
-            <span class="project-caption"><span class="project-name">Persona Builder</span><span class="project-meta">AI · Audience insight</span></span>
+            <span class="project-caption"><span class="project-name">Persona Builder</span><span class="project-meta">Synthetic personas.</span></span>
           </button>
           <button class="project-card" type="button" data-project="futures" aria-haspopup="dialog" aria-label="View Futures Fundamentals project image">
             <span class="project-image"><img src="/assets/work/futures-fundamentals.jpg" alt="Illustrated cityscape introducing Futures Fundamentals" width="1920" height="1080"></span>
@@ -338,7 +333,6 @@
       </main>
 
       <footer class="site-footer">
-        <span>Jonathon Westbrook</span>
         <span>Design · Technology</span>
       </footer>
     </div>
@@ -482,7 +476,7 @@
         previous.addEventListener("click", () => step(-1));
         next.addEventListener("click", () => step(1));
         dialog.addEventListener("click", (event) => {
-          if (event.target === dialog) dialog.close();
+          if (!event.target.closest(".viewer-image, .viewer-arrow, .viewer-close, a")) dialog.close();
         });
         dialog.addEventListener("close", () => {
           if (returnFocus) returnFocus.focus();
