@@ -1,89 +1,472 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="description" content="Selected digital work by Jonathon Westbrook.">
+    <title>Jonathon Westbrook — Selected Work</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #fff;
+        --ink: #111;
+        --muted: #777;
+        --line: #e6e6e6;
+        --cyan: #00e5ff;
+        --pink: #ff2d8d;
+        --green: #b7ff00;
+        --sans: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.3.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.3.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.3.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.3.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.3.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.3.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.3.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.3.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.3.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.3.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+      * { box-sizing: border-box; }
+      html { min-width: 320px; background: var(--paper); }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-font-smoothing: antialiased;
+      }
+      button, a { font: inherit; }
+      button:focus-visible, a:focus-visible {
+        outline: 2px solid var(--pink);
+        outline-offset: 5px;
+      }
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
+      .page { width: min(1760px, calc(100% - 80px)); margin: 0 auto; }
+      .masthead {
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+      }
+      .wordmark {
+        color: var(--ink);
+        font-size: 15px;
+        font-weight: 650;
+        letter-spacing: -.035em;
+        text-decoration: none;
+      }
+      .masthead-note {
+        color: var(--muted);
+        font-size: 10px;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+
+      .work { padding: 34px 0 72px; }
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 22px;
+        row-gap: 38px;
+      }
+      .project-card {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        padding: 0;
+        border: 0;
+        color: inherit;
+        background: transparent;
+        text-align: left;
+        cursor: pointer;
+      }
+      .project-image {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: #eee;
+      }
+      .project-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .55s cubic-bezier(.2,.7,.2,1), filter .35s ease;
+      }
+      .project-card:hover .project-image img,
+      .project-card:focus-visible .project-image img {
+        transform: scale(1.025);
+        filter: saturate(1.06);
+      }
+      .project-caption {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 14px;
+        width: 100%;
+        padding-top: 11px;
+      }
+      .project-name {
+        font-size: 13px;
+        font-weight: 550;
+        letter-spacing: -.015em;
+      }
+      .project-meta {
+        color: var(--muted);
+        font-size: 9px;
+        letter-spacing: .09em;
+        text-align: right;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .project-card:hover .project-name { text-decoration: underline; text-decoration-color: var(--cyan); text-underline-offset: 4px; }
+      .project-card[data-project="polling"] .project-meta { color: #a51c5b; }
+
+      .site-footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 17px 0 24px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 10px;
+      }
+
+      .viewer {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        max-height: none;
+        margin: 0;
+        padding: 20px clamp(18px, 4vw, 64px) 24px;
+        overflow: hidden;
+        border: 0;
+        color: #f5f5f5;
+        background: #101010;
+      }
+      .viewer[open] { display: flex; flex-direction: column; }
+      .viewer::backdrop { background: #101010; }
+      .viewer-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 42px;
+      }
+      .viewer-title {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 550;
+        letter-spacing: .02em;
+      }
+      .viewer-close, .viewer-arrow {
+        display: grid;
+        place-items: center;
+        padding: 0;
+        border: 1px solid #414141;
+        color: #fff;
+        background: transparent;
+        cursor: pointer;
+        transition: border-color .2s ease, color .2s ease, background .2s ease;
+      }
+      .viewer-close:hover, .viewer-arrow:hover {
+        border-color: var(--cyan);
+        color: var(--cyan);
+      }
+      .viewer-close { width: 38px; height: 38px; border-radius: 50%; font-size: 20px; }
+      .viewer-stage {
+        position: relative;
+        display: grid;
+        flex: 1;
+        min-height: 0;
+        place-items: center;
+        padding: 18px 52px;
+        touch-action: pan-y;
+      }
+      .viewer-image {
+        display: block;
+        width: min(100%, 1600px);
+        max-height: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        background: #171717;
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+      .viewer-arrow {
+        position: absolute;
+        top: 50%;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        font-size: 22px;
+        transform: translateY(-50%);
+      }
+      .viewer-arrow:disabled { opacity: .25; cursor: default; }
+      .viewer-arrow:disabled:hover { border-color: #414141; color: #fff; }
+      .viewer-previous { left: 0; }
+      .viewer-next { right: 0; }
+      .viewer-info {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        gap: 18px;
+        width: min(100%, 1600px);
+        min-height: 78px;
+        margin: 0 auto;
+        padding: 14px 0 0;
+        border-top: 1px solid #353535;
+      }
+      .viewer-caption { margin: 0; color: #d1d1d1; font-size: 12px; line-height: 1.5; }
+      .viewer-project { display: block; margin-bottom: 4px; color: #fff; font-size: 12px; font-weight: 600; }
+      .viewer-caption-note { display: block; margin-top: 4px; color: #8d8d8d; font-size: 10px; }
+      .viewer-actions { display: flex; align-items: center; gap: 22px; }
+      .viewer-link {
+        color: #fff;
+        font-size: 10px;
+        text-decoration-color: var(--cyan);
+        text-underline-offset: 4px;
+      }
+      .viewer-link[hidden] { display: none; }
+      .viewer-count {
+        min-width: 46px;
+        color: #aaa;
+        font-size: 10px;
+        font-variant-numeric: tabular-nums;
+        text-align: right;
+      }
+
+      @media (min-width: 1500px) {
+        .project-grid { column-gap: 28px; row-gap: 46px; }
+      }
+      @media (max-width: 900px) {
+        .page { width: calc(100% - 48px); }
+        .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 18px; }
+      }
+      @media (max-width: 560px) {
+        .page { width: calc(100% - 32px); }
+        .masthead { min-height: 62px; }
+        .masthead-note { font-size: 8px; }
+        .work { padding-top: 22px; }
+        .project-grid { grid-template-columns: 1fr; row-gap: 25px; }
+        .project-caption { padding-top: 8px; }
+        .project-name { font-size: 12px; }
+        .project-meta { max-width: 48%; white-space: normal; }
+        .viewer { padding: 12px 14px 18px; }
+        .viewer-stage { padding: 14px 0; }
+        .viewer-image { max-height: 72vh; }
+        .viewer-arrow { top: auto; bottom: 8px; transform: none; }
+        .viewer-previous { left: 0; }
+        .viewer-next { right: 0; }
+        .viewer-info { grid-template-columns: 1fr; gap: 10px; padding-top: 10px; }
+        .viewer-actions { justify-content: space-between; }
+        .site-footer { font-size: 9px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
       }
     </style>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <div class="page">
+      <header class="masthead">
+        <a class="wordmark" href="/">Jonathon Westbrook</a>
+        <span class="masthead-note">Selected work</span>
+      </header>
+
+      <main class="work">
+        <section class="project-grid" aria-label="Selected projects">
+          <button class="project-card" type="button" data-project="autobot" aria-haspopup="dialog" aria-label="View AUTOBOT project images">
+            <span class="project-image"><img src="/assets/work/autobot-research.jpg" alt="AUTOBOT research dashboard with strategy comparison chart" width="1920" height="1080" fetchpriority="high"></span>
+            <span class="project-caption"><span class="project-name">AUTOBOT</span><span class="project-meta">Research systems</span></span>
+          </button>
+          <button class="project-card" type="button" data-project="persona" aria-haspopup="dialog" aria-label="View Persona Builder project images">
+            <span class="project-image"><img src="/assets/work/persona-home.jpg" alt="AI Persona Builder interface and agent conversation" width="1920" height="1080"></span>
+            <span class="project-caption"><span class="project-name">Persona Builder</span><span class="project-meta">AI · Audience insight</span></span>
+          </button>
+          <button class="project-card" type="button" data-project="futures" aria-haspopup="dialog" aria-label="View Futures Fundamentals project image">
+            <span class="project-image"><img src="/assets/work/futures-fundamentals.jpg" alt="Illustrated cityscape introducing Futures Fundamentals" width="1920" height="1080"></span>
+            <span class="project-caption"><span class="project-name">Futures Fundamentals</span><span class="project-meta">Education · Motion</span></span>
+          </button>
+          <button class="project-card" type="button" data-project="cardx" aria-haspopup="dialog" aria-label="View CardX project image">
+            <span class="project-image"><img src="/assets/work/cardx.jpg" alt="CardX point-of-sale dashboard with sales and deposits data visualizations" width="1920" height="1080"></span>
+            <span class="project-caption"><span class="project-name">CardX</span><span class="project-meta">Product · Design system</span></span>
+          </button>
+          <button class="project-card" type="button" data-project="icsc" aria-haspopup="dialog" aria-label="View ICSC project image">
+            <span class="project-image"><img src="/assets/work/icsc.jpg" alt="ICSC website with New York skyline and event content" width="1920" height="1080"></span>
+            <span class="project-caption"><span class="project-name">ICSC</span><span class="project-meta">Digital · Design system</span></span>
+          </button>
+          <button class="project-card" type="button" data-project="polling" aria-haspopup="dialog" aria-label="View VML Polling Kiosk design concept">
+            <span class="project-image"><img src="/assets/work/vml-polling-concept.jpg" alt="VML Polling Kiosks dashboard concept with colorful poll results chart" width="1920" height="1080"></span>
+            <span class="project-caption"><span class="project-name">VML Polling Kiosk</span><span class="project-meta">Interface concept</span></span>
+          </button>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>Jonathon Westbrook</span>
+        <span>Design · Technology</span>
+      </footer>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+
+    <dialog class="viewer" aria-label="Project image viewer">
+      <div class="viewer-header">
+        <h2 class="viewer-title" id="viewer-title">Project</h2>
+        <button class="viewer-close" type="button" aria-label="Close project viewer">×</button>
+      </div>
+      <div class="viewer-stage">
+        <button class="viewer-arrow viewer-previous" type="button" aria-label="Previous image">‹</button>
+        <img class="viewer-image" src="" alt="">
+        <button class="viewer-arrow viewer-next" type="button" aria-label="Next image">›</button>
+      </div>
+      <div class="viewer-info">
+        <p class="viewer-caption"><span class="viewer-project"></span><span class="viewer-description"></span><span class="viewer-caption-note" hidden></span></p>
+        <div class="viewer-actions">
+          <a class="viewer-link" href="" target="_blank" rel="noopener noreferrer" hidden></a>
+          <span class="viewer-count" aria-live="polite"></span>
+        </div>
+      </div>
+    </dialog>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      (() => {
+        const projects = {
+          autobot: {
+            title: "AUTOBOT",
+            description: "A human-reviewed research system for exploring AI-generated trading strategy experiments.",
+            note: "Public demo uses synthetic data. Historical and modeled results are not a guarantee of future performance.",
+            link: "https://autobot-demo.netlify.app/",
+            linkText: "Open synthetic-data demo ↗",
+            slides: [
+              { src: "/assets/work/autobot-research.jpg", alt: "Research overview comparing a strategy with a buy-and-hold benchmark." },
+              { src: "/assets/work/autobot-labs.jpg", alt: "Research labs dashboard comparing candidate experiments." }
+            ]
+          },
+          persona: {
+            title: "Persona Builder",
+            description: "A research tool for turning audience data into structured personas and conversational insights.",
+            slides: [
+              { src: "/assets/work/persona-home.jpg", alt: "Product introduction and AI persona assistant." },
+              { src: "/assets/work/persona-profile.jpg", alt: "Finalized audience persona with visual recommendation." },
+              { src: "/assets/work/persona-library.jpg", alt: "Persona library organized into draft and final audiences." },
+              { src: "/assets/work/persona-detail.jpg", alt: "Persona detail view with audience summary and selected signals." },
+              { src: "/assets/work/persona-social-sharers.jpg", alt: "Persona detail concept for a high-volume social-sharing audience." }
+            ]
+          },
+          futures: {
+            title: "Futures Fundamentals",
+            description: "An illustrated learning experience that makes futures and derivatives markets easier to explore.",
+            link: "https://www.futuresfundamentals.org/",
+            linkText: "Visit live site ↗",
+            slides: [
+              { src: "/assets/work/futures-fundamentals.jpg", alt: "Illustrated opening screen for Futures Fundamentals." }
+            ]
+          },
+          cardx: {
+            title: "CardX",
+            description: "A responsive point-of-sale experience supported by reusable interface components and templates.",
+            link: "/cardx/?p=Templates-T02-Home",
+            linkText: "View live project ↗",
+            slides: [
+              { src: "/assets/work/cardx.jpg", alt: "CardX home dashboard with terminal, sales, and deposit reporting." }
+            ]
+          },
+          icsc: {
+            title: "ICSC",
+            description: "A large content experience shaped by a modular design system.",
+            link: "/icsc/?p=templates-T01-Home",
+            linkText: "View live project ↗",
+            slides: [
+              { src: "/assets/work/icsc.jpg", alt: "ICSC site with city imagery and event content." }
+            ]
+          },
+          polling: {
+            title: "VML Polling Kiosk",
+            description: "A colorful dashboard concept for managing audience polls and presenting results.",
+            note: "Interface design concept; not a live product.",
+            slides: [
+              { src: "/assets/work/vml-polling-concept.jpg", alt: "Polling dashboard concept with answer controls and a live-results visualization." }
+            ]
+          }
+        };
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        const dialog = document.querySelector(".viewer");
+        const image = dialog.querySelector(".viewer-image");
+        const title = dialog.querySelector(".viewer-title");
+        const projectLabel = dialog.querySelector(".viewer-project");
+        const description = dialog.querySelector(".viewer-description");
+        const note = dialog.querySelector(".viewer-caption-note");
+        const count = dialog.querySelector(".viewer-count");
+        const link = dialog.querySelector(".viewer-link");
+        const previous = dialog.querySelector(".viewer-previous");
+        const next = dialog.querySelector(".viewer-next");
+        const close = dialog.querySelector(".viewer-close");
+        let activeProject;
+        let activeIndex = 0;
+        let returnFocus;
+        let touchStartX = null;
+
+        function showSlide() {
+          const project = projects[activeProject];
+          const slide = project.slides[activeIndex];
+          image.src = slide.src;
+          image.alt = slide.alt;
+          title.textContent = project.title;
+          projectLabel.textContent = project.title;
+          description.textContent = project.description;
+          note.textContent = project.note || "";
+          note.hidden = !project.note;
+          count.textContent = `${String(activeIndex + 1).padStart(2, "0")} / ${String(project.slides.length).padStart(2, "0")}`;
+          previous.disabled = project.slides.length < 2;
+          next.disabled = project.slides.length < 2;
+          link.hidden = !project.link;
+          if (project.link) {
+            link.href = project.link;
+            link.textContent = project.linkText;
+          }
         }
-      });
+
+        function openProject(id, trigger) {
+          activeProject = id;
+          activeIndex = 0;
+          returnFocus = trigger;
+          showSlide();
+          dialog.showModal();
+          close.focus();
+        }
+
+        function step(direction) {
+          const slides = projects[activeProject].slides;
+          activeIndex = (activeIndex + direction + slides.length) % slides.length;
+          showSlide();
+        }
+
+        document.querySelectorAll(".project-card").forEach((card) => {
+          card.addEventListener("click", () => openProject(card.dataset.project, card));
+        });
+        close.addEventListener("click", () => dialog.close());
+        previous.addEventListener("click", () => step(-1));
+        next.addEventListener("click", () => step(1));
+        dialog.addEventListener("click", (event) => {
+          if (event.target === dialog) dialog.close();
+        });
+        dialog.addEventListener("close", () => {
+          if (returnFocus) returnFocus.focus();
+        });
+        dialog.addEventListener("keydown", (event) => {
+          if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            step(-1);
+          } else if (event.key === "ArrowRight") {
+            event.preventDefault();
+            step(1);
+          }
+        });
+        image.addEventListener("pointerdown", (event) => { touchStartX = event.clientX; });
+        image.addEventListener("pointerup", (event) => {
+          if (touchStartX === null) return;
+          const delta = event.clientX - touchStartX;
+          touchStartX = null;
+          if (Math.abs(delta) > 45) step(delta < 0 ? 1 : -1);
+        });
+        image.addEventListener("pointercancel", () => { touchStartX = null; });
+      })();
     </script>
   </body>
 </html>
