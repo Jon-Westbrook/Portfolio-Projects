@@ -16,11 +16,18 @@
         --cyan: #00e5ff;
         --pink: #ff2d8d;
         --green: #b7ff00;
+        --page-width: calc(100% - 80px);
+        --page-max-width: 1760px;
         --sans: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
 
       * { box-sizing: border-box; }
-      html { min-width: 320px; background: var(--paper); font-size: 16px; }
+      html {
+        min-width: 320px;
+        background: var(--paper);
+        font-size: 16px;
+        scrollbar-gutter: stable;
+      }
       .visually-hidden {
         position: absolute;
         width: 1px;
@@ -48,7 +55,7 @@
         outline-offset: 5px;
       }
 
-      .page { width: min(1760px, calc(100% - 80px)); margin: 0 auto; }
+      .page { width: min(var(--page-max-width), var(--page-width)); margin: 0 auto; }
       .masthead {
         min-height: 112px;
         display: flex;
@@ -84,7 +91,7 @@
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         column-gap: 22px;
-        row-gap: 56px;
+        row-gap: 72px;
       }
       .project-card {
         display: block;
@@ -155,7 +162,7 @@
         height: 100%;
         max-height: none;
         margin: 0;
-        padding: 20px clamp(18px, 4vw, 64px) 24px;
+        padding: 20px 0 24px;
         overflow: hidden;
         border: 0;
         color: #f5f5f5;
@@ -168,7 +175,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: min(var(--page-max-width), var(--page-width));
         min-height: 42px;
+        margin-inline: auto;
       }
       .viewer-title {
         margin: 0;
@@ -260,24 +269,29 @@
       }
 
       @media (min-width: 1500px) {
-        .project-grid { column-gap: 28px; row-gap: 64px; }
+        .project-grid { column-gap: 28px; row-gap: 80px; }
       }
       @media (max-width: 900px) {
-        .page { width: calc(100% - 48px); }
-        .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 18px; }
+        :root { --page-width: calc(100% - 48px); }
+        .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 42px 18px; }
       }
       @media (max-width: 560px) {
-        .page { width: calc(100% - 32px); }
-        .masthead { min-height: 0; align-items: flex-start; flex-direction: column; gap: 16px; padding: 18px 0; }
+        :root { --page-width: calc(100% - 32px); }
+        .masthead { min-height: 0; align-items: flex-start; flex-direction: column; gap: 24px; padding: 22px 0 24px; }
         .wordmark { font-size: 28px; }
-        .masthead-links { width: 100%; justify-content: flex-start; gap: 22px; }
+        .masthead-links { width: 100%; justify-content: flex-start; column-gap: 20px; row-gap: 12px; }
         .work { padding-top: 34px; }
-        .project-grid { grid-template-columns: 1fr; row-gap: 42px; }
+        .project-grid { grid-template-columns: 1fr; row-gap: 54px; }
         .project-caption { padding-top: 12px; }
         .project-name { font-size: 20px; }
         .project-meta { max-width: 48%; white-space: normal; }
         .viewer { justify-content: center; padding: 10px 0 18px; }
-        .viewer-header { position: absolute; top: 10px; right: 16px; left: 16px; padding: 0; }
+        .viewer-header {
+          position: absolute;
+          top: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
         .viewer-stage { flex: 0 0 auto; width: 100%; padding: 0; }
         .viewer-image { width: 100vw; max-width: none; max-height: 62dvh; aspect-ratio: auto; object-fit: contain; }
         .viewer-arrow { top: 50%; bottom: auto; transform: translateY(-50%); background: #101010cc; }
@@ -337,7 +351,7 @@
       </main>
 
       <footer class="site-footer">
-        <span>Technology, made human</span>
+        <span>Technology, made human.</span>
       </footer>
     </div>
 
