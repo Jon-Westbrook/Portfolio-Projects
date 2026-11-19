@@ -40,6 +40,7 @@
         font-size: 20px;
         line-height: 1.45;
         -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
       button, a { font: inherit; }
       button:focus-visible, a:focus-visible {
@@ -56,18 +57,12 @@
         gap: 32px;
         border-bottom: 1px solid var(--line);
       }
-      .masthead-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
       .wordmark {
         color: var(--ink);
         font-size: 32px;
         font-weight: 650;
         letter-spacing: -.035em;
         text-decoration: none;
-      }
-      .masthead-note {
-        color: var(--muted);
-        font-size: 16px;
-        line-height: 1.25;
       }
       .masthead-links {
         display: flex;
@@ -195,7 +190,8 @@
         border-color: var(--cyan);
         color: var(--cyan);
       }
-      .viewer-close { width: 44px; height: 44px; border-radius: 50%; font-size: 26px; }
+      .viewer-close { width: 44px; height: 44px; border-radius: 50%; }
+      .viewer-close svg { display: block; width: 20px; height: 20px; }
       .viewer-stage {
         position: relative;
         display: grid;
@@ -273,7 +269,6 @@
       @media (max-width: 560px) {
         .page { width: calc(100% - 32px); }
         .masthead { min-height: 0; align-items: flex-start; flex-direction: column; gap: 16px; padding: 18px 0; }
-        .masthead-brand { width: 100%; align-items: flex-start; }
         .wordmark { font-size: 28px; }
         .masthead-links { width: 100%; justify-content: flex-start; gap: 22px; }
         .work { padding-top: 34px; }
@@ -303,10 +298,7 @@
   <body>
     <div class="page">
       <header class="masthead">
-        <div class="masthead-brand">
-          <a class="wordmark" href="/">Jonathon Westbrook</a>
-          <span class="masthead-note">Selected Work</span>
-        </div>
+        <a class="wordmark" href="/">Jonathon Westbrook</a>
         <nav class="masthead-links" aria-label="Professional links">
           <a href="/resume/Jonathon_Westbrook_Resume_Design-Engineer-Final.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a>
           <a href="https://www.linkedin.com/in/jonathonwestbrook" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
@@ -319,11 +311,11 @@
         <section class="project-grid" aria-label="Selected projects">
           <button class="project-card" type="button" data-project="autobot" aria-haspopup="dialog" aria-label="View AUTOBOT project images">
             <span class="project-image"><img src="/assets/work/autobot-research.jpg" alt="AUTOBOT research dashboard with strategy comparison chart" width="1920" height="1080" fetchpriority="high"></span>
-            <span class="project-caption"><span class="project-name">AUTOBOT</span><span class="project-meta">AI Autoresearch</span></span>
+            <span class="project-caption"><span class="project-name">AUTOBOT</span><span class="project-meta">AI · Autoresearch</span></span>
           </button>
           <button class="project-card" type="button" data-project="persona" aria-haspopup="dialog" aria-label="View Persona Builder project images">
             <span class="project-image"><img src="/assets/work/persona-home.jpg" alt="AI Persona Builder interface and agent conversation" width="1920" height="1080"></span>
-            <span class="project-caption"><span class="project-name">Persona Builder</span><span class="project-meta">Synthetic personas.</span></span>
+            <span class="project-caption"><span class="project-name">Persona Builder</span><span class="project-meta">AI · Synthetic personas</span></span>
           </button>
           <button class="project-card" type="button" data-project="futures" aria-haspopup="dialog" aria-label="View Futures Fundamentals project image">
             <span class="project-image"><img src="/assets/work/futures-fundamentals.jpg" alt="Illustrated cityscape introducing Futures Fundamentals" width="1920" height="1080"></span>
@@ -352,7 +344,11 @@
     <dialog class="viewer" aria-label="Project image viewer">
       <div class="viewer-header">
         <h2 class="viewer-title" id="viewer-title">Project</h2>
-        <button class="viewer-close" type="button" aria-label="Close project viewer">×</button>
+        <button class="viewer-close" type="button" aria-label="Close project viewer">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 6 18 18M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+          </svg>
+        </button>
       </div>
       <div class="viewer-stage">
         <button class="viewer-arrow viewer-previous" type="button" aria-label="Previous image">‹</button>
